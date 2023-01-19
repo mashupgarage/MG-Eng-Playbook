@@ -1,7 +1,7 @@
 ## Developer Values
 ### Open Communication
 - We strive for an environment where developers are open to discuss and learn from each other
-- Open to learn and open to teach
+- We encourage sharing of ideas and new discoveries
 ### Collaboration
 - We encourage developers to give each other feedback and review each other’s work
 - We encourage leads to know when to delegate tasks so that other developers can grow from working on these tasks
