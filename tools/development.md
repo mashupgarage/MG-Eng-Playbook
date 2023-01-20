@@ -10,3 +10,5 @@ These are the preferred tools we use for developing software
 	- Devs do code reviews and communicate their comments through these PRs
 
 ## [Vim]()
+- Developers are free to use whatever editor they want but we recommend at least basic knowledge of vim
+- We recommend vim when working in a terminal based environment (e.g. SSH)
