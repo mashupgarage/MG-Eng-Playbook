@@ -2,4 +2,11 @@
 These are the tools we use for writing code
 
 ## [Github]()
+- We use this to track the version history of a project
+	- Each project has a repository that contains all the code contributed by developers
+	- Projects are released in versions which can be viewed and accessed in their respective repositories
+- We also use this as a collaboration tool
+	- Devs create Pull Requests (PRs) that detail the changes they're adding to a project
+	- Devs do code reviews and communicate their comments through these PRs
+
 ## [Vim]()
