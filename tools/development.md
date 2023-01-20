@@ -1,5 +1,5 @@
 # Development
-These are the tools we use for writing code
+These are the preferred tools we use for developing software
 
 ## [Github]()
 - We use this to track the version history of a project
