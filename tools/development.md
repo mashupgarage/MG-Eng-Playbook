@@ -12,3 +12,4 @@ These are the preferred tools we use for developing software
 ## [Vim]()
 - Developers are free to use whatever editor they want but we recommend at least basic knowledge of vim
 - We recommend vim when working in a terminal based environment (e.g. SSH)
+- We consider using and customizing vim as an exercise to better understand how the editor works
