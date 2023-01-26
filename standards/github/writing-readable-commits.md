@@ -23,8 +23,8 @@
 - Prefer many small and focused commits rather than a few big ones
 - Atomic commits can help give a clearer step by step process of what was done
 - Atomic commits also help trace changes clearly
-	❌ Implements drag and drop uploads
-	✅ Installs react-dropzone
-	✅ Configures dropzone
-	✅ Adds dropzone to uploader component
-	✅ Validates uploaded files
+	- ❌ Implements drag and drop uploads
+	- ✅ Installs react-dropzone
+	- ✅ Configures dropzone
+	- ✅ Adds dropzone to uploader component
+	- ✅ Validates uploaded files
