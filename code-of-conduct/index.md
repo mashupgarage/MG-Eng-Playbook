@@ -32,6 +32,7 @@
 ### Elixir
 - [Getting Started](https://elixir-lang.org/getting-started/introduction.html)
 - [Phoenix Documentation](https://hexdocs.pm/phoenix/up_and_running.html)
+- [Elixir Styleguide](https://github.com/christopheradams/elixir_style_guide)
 
 ### React JS
 
