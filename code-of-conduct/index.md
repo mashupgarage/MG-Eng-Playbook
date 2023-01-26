@@ -30,6 +30,8 @@
 - [Ruby Styleguide](https://rubystyle.guide/)
 
 ### Elixir
+- [Getting Started](https://elixir-lang.org/getting-started/introduction.html)
+- [Phoenix Documentation](https://hexdocs.pm/phoenix/up_and_running.html)
 
 ### React JS
 
