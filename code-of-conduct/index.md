@@ -35,5 +35,7 @@
 - [Elixir Styleguide](https://github.com/christopheradams/elixir_style_guide)
 
 ### React JS
+- [React Documentation](https://reactjs.org/)
 
-### Typescript
+### TypeScript
+- [TypeScript Documentation](https://www.typescriptlang.org/docs/handbook/typescript-from-scratch.html)
