@@ -1,4 +1,7 @@
+# Code of Conduct
+
 ## Developer Values
+
 ### Open Communication
 - We strive for an environment where developers are open to discuss and learn from each other
 - We encourage sharing of ideas and new discoveries
@@ -18,3 +21,13 @@
 - We embrace curiosity and a continuous passion to learn and adapt to new technologies
 ### Work-Life Balance
 - We try to find the right priorities to get work done according to schedule
+
+## Required Readings
+
+### Ruby on Rails
+
+### Elixir
+
+### React JS
+
+### Typescript
