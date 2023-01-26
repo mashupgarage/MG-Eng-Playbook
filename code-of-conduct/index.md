@@ -25,6 +25,9 @@
 ## Required Readings
 
 ### Ruby on Rails
+- [Getting Started](https://guides.rubyonrails.org/getting_started.html)
+- [Ruby in twenty minutes](https://www.ruby-lang.org/en/documentation/quickstart/)
+- [Ruby Styleguide](https://rubystyle.guide/)
 
 ### Elixir
 
