@@ -13,18 +13,18 @@
 - Adjust accordingly based on team preference or conventions
 
 ## Make them as specific as possible
-❌ Code review
-❌ Fixes bug
-✅ Improves implementation of comments
-✅ Fixes spacing in pdf file
-✅ Adds tests for invoice approval
+- ❌ Code review
+- ❌ Fixes bug
+- ✅ Improves implementation of comments
+- ✅ Fixes spacing in pdf file
+- ✅ Adds tests for invoice approval
 
 ## Make them atomic
 - Prefer many small and focused commits rather than a few big ones
 - Atomic commits can help give a clearer step by step process of what was done
 - Atomic commits also help trace changes clearly
-❌ Implements drag and drop uploads
-✅ Installs react-dropzone
-✅ Configures dropzone
-✅ Adds dropzone to uploader component
-✅ Validates uploaded files
+	❌ Implements drag and drop uploads
+	✅ Installs react-dropzone
+	✅ Configures dropzone
+	✅ Adds dropzone to uploader component
+	✅ Validates uploaded files
