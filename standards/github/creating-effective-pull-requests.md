@@ -23,7 +23,16 @@ A Pull Request (PR) is our primary means of communicating code changes in our pr
 
 ## Provide screenshots or screen capture
 - Do only if applicable. It might not be needed for backend changes for example
+- Provide proper descriptions for each item
 - Add a short description of what happened for each screenshot
+	- ✅ Table displays proper sorting controls
+	- ✅ Fixed the excess spacing between the nav bar and content
 - Use a gif when you need to show a series of interactions
+	- ✅ Table sorts ascending and descending as soon as columns are clicked
+	- ✅ Page loads faster after fix
 - For bugfix tickets, consider putting a before and after section
+	- ✅ Before: User is stuck in login page
+	- ✅ After: User is able to login properly
 - Show desktop, tablet, or mobile views when applicable
+	- ✅ Mobile: Table is compressed but sorting still works as intended
+	- ✅ Tablet: Improved size of nav menu in tablet view
