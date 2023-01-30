@@ -1,4 +1,5 @@
 # Writing Readable Commits
+Commits serve as documentation of the step by step process done in creating a PR. When properly utilized it can help reviewers have a clearer picture of what changed and what to look out for. These are some tips to improve readability of commits:
 
 ## Use proper syntax
 - Capitalize first letter
