@@ -1,9 +1,5 @@
 # Deployments
 
-## Heroku
-
-Heroku is a cloud-based platform that allows developers to build, run, and operate web applications entirely in the cloud. It supports a wide variety of programming languages and frameworks, and makes it easy for developers to deploy, scale, and manage their applications. Heroku also provides a number of additional services such as database management, monitoring, and logging to help developers manage their applications. With Heroku, developers can focus on writing code, while the platform handles the infrastructure and scaling.
-
 ## Gigalixir
 
 Gigalixir is a platform as a service (PaaS) that allows developers to deploy and run their Elixir and Phoenix web applications. It is built on top of the Google Cloud Platform and provides a number of features to make it easy to deploy, run, and scale Elixir and Phoenix applications.
@@ -31,29 +27,7 @@ Below are some of the services offered by Amazon Web Services (AWS):
 
 - Amazon Relational Database Service (RDS) - A managed service for relational databases such as MySQL, MariaDB, PostgreSQL, Oracle and Microsoft SQL Server
 
-- Amazon DynamoDB - A fast and flexible NoSQL database service for all applications that need consistent, single-digit millisecond latency at any scale.
-
 - Amazon Elastic Container Service (ECS) - A container orchestration service
-
-- Amazon Elastic Kubernetes Service (EKS) - A managed Kubernetes service
-
-- Amazon Elastic Block Store (EBS) - A service that provides raw block-level storage of an EBS volume
-
-- Amazon CloudFront - A content delivery network (CDN) service
-
-- Amazon CloudWatch - A monitoring service for AWS resources and the applications you run on AWS
-
-- Amazon Simple Queue Service (SQS) - A fully managed message queue service
-
-- Amazon Simple Notification Service (SNS) - A fully managed messaging service
-
-- Amazon Simple Email Service (SES) - An email sending service
-
-- Amazon AppStream - A service for streaming desktop applications
-
-- Amazon Elasticsearch Service - A service for deploying, operating, and scaling Elasticsearch clusters
-
-- Amazon Redshift - A fully managed data warehouse service
 
 ## Docker
 
@@ -63,6 +37,8 @@ Docker provides a containerization technology that enables developers to package
 
 Docker also provides tools for managing and orchestrating containers, making it easy to scale and manage large numbers of containers. This allows for efficient use of resources, and consistency in deployment.
 Docker has a large ecosystem, with a lot of community support, and a wide range of tools and services that integrate with it.
+
+Go to [Docker sample usage](docker/sample-rails.md) section to see it in action.
 
 ## Semaphore
 
