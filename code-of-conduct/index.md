@@ -22,7 +22,7 @@
 ### Work-Life Balance
 - We try to find the right priorities to get work done according to schedule
 
-## Required Readings
+## Suggested Readings
 
 ### Ruby on Rails
 - [Getting Started](https://guides.rubyonrails.org/getting_started.html)
