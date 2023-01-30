@@ -37,6 +37,7 @@
 ### Work-Life Balance
 - We try to find the right priorities to get work done according to schedule
 	- Don't overwork yourself
+	- Break down tasks into small and manageable pieces
 	- Communicate blockers in a timely manner
 
 ## Suggested Readings
