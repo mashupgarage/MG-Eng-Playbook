@@ -1,3 +1,6 @@
+# Creating Effective Pull Requests
+A Pull Request (PR) is our primary means of communicating code changes in our projects. We encourage developers to do code reviews to check that PRs achieve their goals and are up to standard. As reviewers may be busy or don't always have the full context of the code changes, we want to put as much detail as possible to make reviews faster and easier. Here are some tips to make PRs more effective:
+
 ## Keep it Small
 - Ideally PRs should be not more than 700 additions/deletions
 - If PR grows beyond that consider asking if ticket needs to be split into smaller ones
