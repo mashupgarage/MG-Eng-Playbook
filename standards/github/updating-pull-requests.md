@@ -31,8 +31,9 @@ At some point our PRs will be out of sync with other branches and we will have t
 [Merging vs. Rebasing | Atlassian Git Tutorial](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
 
 - Destructive (creates new commits in place of older ones)
+- Prone to breakage and conflicts if not managed properly
 - Can be easier to navigate due to not having any merge commit forks
-- rebasing `feature-1` *onto* `develop`
+- Rebasing `feature-1` *onto* `develop`
 
 	```bash
 	# make sure branches are updated
@@ -42,7 +43,7 @@ At some point our PRs will be out of sync with other branches and we will have t
 	git push --force-with-lease
 	```
 
-- onto means the branch whose commits you want to put before the target branch
+- Onto means the branch whose commits you want to put before the target branch
 
 ## Which should I use
 
