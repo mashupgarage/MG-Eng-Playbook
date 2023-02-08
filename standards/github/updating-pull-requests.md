@@ -47,10 +47,10 @@ At some point our PRs will be out of sync with other branches and we will have t
 
 ## Which should I use
 
-Generally we prefer to use merge over rebase except for the following cases:
-- PR has no review comments
+Generally we prefer to use merge. Use rebase in the following cases:
+- PR has no review comments yet
 - PR is already approved and is about to be merged into develop
-- PR is not depedent on another PR (See Golden Rule of Rebasing)
+- PR does not involve a public branch (See Golden Rule of Rebasing)
 
 ## Golden Rule of Rebasing
 
