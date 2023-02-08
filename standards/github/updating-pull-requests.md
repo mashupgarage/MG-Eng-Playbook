@@ -47,12 +47,16 @@ At some point our PRs will be out of sync with other branches and we will have t
 
 ## Which should I use
 
-Generally we prefer to use rebase except for some cases where merge is more ideal
+Generally we prefer to use merge over rebase except for the following cases:
+- PR has no review comments
+- PR is already approved and is about to be merged into develop
+- PR is not depedent on another PR (See Golden Rule of Rebasing)
 
 ## Golden Rule of Rebasing
 
 [Merging vs. Rebasing | Atlassian Git Tutorial](https://www.atlassian.com/git/tutorials/merging-vs-rebasing#the-golden-rule-of-rebasing)
 
+- Avoid using on PRs that have comments as this can remove comments that reviewers may need to follow up on
 - Avoid using rebase for any branches that other branches are dependent on (we call these public branches)
 - `develop`/`master`/`main` are public branches so avoid rebasing those
 - Release branches are also public branches so avoid rebase for those
@@ -62,6 +66,6 @@ Generally we prefer to use rebase except for some cases where merge is more idea
     develop <- feature-1 <- feature-2 <- feature-3
     ```
 
-    - feature-1 and feature-2 are public because they branched out from other branches. Avoid rebasing these branches to avoid conflicts. Prefer merge for this case if you need to update.
-    - It’s especially important to avoid rebase if these PRs are separate tickets to preserve prior merge commits and leave traces of where these started/ended
+    - feature-1 and feature-2 are public because they branched out from other branches. Avoid rebasing these branches to avoid conflicts, most especially if you're not the author of the other branches. Prefer merge for this case if you need to update.
+    - It’s especially important to avoid rebase if these PRs are separate tickets, to preserve prior merge commits and leave traces of where these started/ended
     - feature-3 is not public so rebase should be fine
