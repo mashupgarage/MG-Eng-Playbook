@@ -2,15 +2,15 @@
 
 These are the preferred tools we use for communication within the company:
 
-## [Slack]()
-- For sharing information
-	- We have channels where you could share and receive information from not just your team.
-	- *slackoverflow* channel is a good programming exchange that we utilize for when we want to share or ask questions from other developers.
-- For sending out PRs (pull requests)
-	- We use the project channel in slack to send ping the team that a pull request is for review
-- For team announcements
-	- We send out announcements to the teams via the project channel. Announcements range from asking for PR reviews to implementing things in the project that would affect the team.
-- For integrations with services
+## Slack
+- We use this to share knowledge
+	- We have a *slackoverflow* channel to share or ask questions from other developers.
+	- We also have dedicated channels for discussing specific tech (e.g. elixir, ruby, react, docker)
+- We use this for project communications
+	- There are dedicated channels for project specific discussions
+	- We can notify other devs when a pull request is up for review
+	- We send out announcements to the teams through these channels
+- We also add integrations with services
 	- We use integrations with github to get notified of updates (e.g. comments, merges, new PRs) more easily
 	- We use integrations with bug tracking applications (e.g. bugsnag) to get notified of bugs faster
 
