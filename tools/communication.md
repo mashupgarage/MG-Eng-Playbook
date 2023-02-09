@@ -14,11 +14,14 @@ These are the preferred tools we use for communication within the company:
 	- We use integrations with github to get notified of updates (e.g. comments, merges, new PRs) more easily
 	- We use integrations with bug tracking applications (e.g. bugsnag) to get notified of bugs faster
 
-## [Discord]()
-- For team calls
-	- We do our daily stand ups using discord.
-	- We also conduct our sprint planning with discord.
-	- Project post mortems are done via discord.
-- For pair programming sessions
-	- Whenever devs are struggling and they need help they conduct their pair programming sessions on our discord server
-
+## Discord
+- We use this for some team meetings such as:
+	- Daily stand ups;
+	- Sprint planning; and
+	- Project post mortems
+- We use this for pair programming sessions
+	- Whenever devs are struggling and they need help they can conduct their pair programming sessions on our discord server
+- We sometimes host online events on our discord server such as:
+	- Teaching sessions;
+	- Code challenges; and
+	- Hangouts
