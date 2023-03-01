@@ -31,3 +31,20 @@ If using Jira or any platform that has auto generated ticket number, prepend tha
 - ✅ matt-123/approve-requests
 - ✅ matt-123/approve-requests-tests (in some cases there can be multiple branches for same ticket)
 - ✅ no-ticket/upgrade-nodejs-to-18
+
+## Add specific details when applicable
+Since there can be many branches in a codebase, it can be helpful to put some details such as:
+- Version
+	- There can be multiple version update branches so specify which one
+	- ❌ chore/update-rails
+	- ✅ chore/update-rails-to-7.1.0
+- Bug/Issue
+	- Specify which issue since there can be more than issue
+	- ❌ matt-124/fix-request-issue
+	- ✅ matt-124/fix-request-not-filing
+- Ticket name
+	- Sometimes it makes sense to use the ticket name itself as the branch name
+	- ✅ matt-125/allow-admin-to-request-for-user
+	- But if too long we can shorten it
+	- ❌ feature/allow-users-to-view-requests-from-team
+	- ✅ feature/view-requests-from-team
