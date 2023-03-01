@@ -26,3 +26,8 @@ Also there are some exceptions to this convention such as:
 - release branches
 	- ✅ rel-1.2.0
 
+## Indicate ticket number in branch name
+If using Jira or any platform that has auto generated ticket number, prepend that number to the branch name instead of category. If no ticket just indicate that there is none.
+- ✅ matt-123/approve-requests
+- ✅ matt-123/approve-requests-tests (in some cases there can be multiple branches for same ticket)
+- ✅ no-ticket/upgrade-nodejs-to-18
