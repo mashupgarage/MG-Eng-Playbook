@@ -12,7 +12,7 @@ It encourages developers to think about the requirements of the code before writ
 
 Here in Mashup Garage, we actually do not solely follow TDD but we require everyone to write a test on every module/feature you worked on. This makes it easier to maintain the code in the future, which can save time and money in the long run.
 
-At a minimum we require to write a tests for core functions implemented like services and helpers in backend. For reactjs, we write tests for each component to atleast ensure it's rendering without issue and testing the callback functions.
+At a minimum we require to write a unit tests for core functions implemented like services and helpers in backend. For reactjs, we write tests for each component to atleast ensure it's rendering without issue and testing the callback functions.
 
 ## Tools for testing
 
