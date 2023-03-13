@@ -2,7 +2,7 @@ These are the standards and practices we adopt when working with the tools menti
 
 ## Tests
 
-- [Test Driven Development](/standards/tests/why-write-tests.md)
+- [Why do we Test?](/standards/tests/why-write-tests.md)
 
 ## Github
 
