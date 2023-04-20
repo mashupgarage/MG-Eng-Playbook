@@ -3,6 +3,7 @@ These are the standards and practices we adopt when working with the tools menti
 ## Tests
 
 - [Why do we Test?](/standards/tests/why-write-tests.md)
+- [General Testing Guidelines](/standards/tests/general-testing-guidelines.md)
 
 ## Github
 
