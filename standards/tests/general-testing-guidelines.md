@@ -14,4 +14,11 @@ In most cases, we should only test things directly related to the project we're 
 
 ## Inputs and outputs should be predictable
 
-We don't want tests that randomly pass or fail unexpectedly. This can cause delays in CI pipelines which hinders delivery of updates. As such we need to make tests predictable where given a certain input we are sure of what the output will be.
+We don't want tests that randomly pass or fail unexpectedly. This can cause delays in CI pipelines which hinders delivery of updates. As such we need to make tests predictable where given a certain input we are sure of what the output will be. Here are some practices we recommend:
+
+### Always use explicit dates
+
+When we rely on current system date/time we can end up with tests that fail unexpectedly on certain dates. For example we have a function that changes logic at the end of the month. If we rely on system time to test this behavior there's a chance that it behaves different at end of month compared to other days. We need a way to control the date to make things predictable
+- ✅ pass date as argument
+- ✅ use time tools to set current time (e.g. `travel_to` in rails)
+- ❌ use system time (e.g. DateTime.current, Timex.now(), Date())
