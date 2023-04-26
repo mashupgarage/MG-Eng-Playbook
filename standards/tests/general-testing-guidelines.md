@@ -22,3 +22,7 @@ When we rely on current system date/time we can end up with tests that fail unex
 - ✅ pass date as argument
 - ✅ use time tools to set current time (e.g. `travel_to` in rails)
 - ❌ use system time (e.g. DateTime.current, Timex.now(), Date())
+
+### Mock external dependencies
+
+Sometimes we may have data or integrations that are external to the class or module we're working on. This can be data from a 3rd party API or a function from a library. We don't have full control over these dependencies like in the case of API it might disconnect during testing which can slow down the test or for a 3rd party function they might update the implementation. Moreover, for an API with payment per use, calling it every test is costly. Hence, we should use an approach called mocking where we replicate the expected behavior of the external dependencies and use those in place of the actual thing. This way we can control the data we receive but still simulate the actual behavior.
