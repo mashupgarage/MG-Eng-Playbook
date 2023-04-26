@@ -11,3 +11,7 @@ In most cases, we should only test things directly related to the project we're 
 - ❌ implementation of external libraries or plugins (e.g. GraphQL routing)
 - ❌ the internals of languages used in project (e.g. Ruby class implementation)
 - ❌ the internals of frameworks used in project (e.g. Phoenix controller implementation)
+
+## Inputs and outputs should be predictable
+
+We don't want tests that randomly pass or fail unexpectedly. This can cause delays in CI pipelines which hinders delivery of updates. As such we need to make tests predictable where given a certain input we are sure of what the output will be.
