@@ -12,4 +12,4 @@ To continuously test updates to the codebase, we recommend setting up a CI envir
 
 ## Staging Server
 
-To preview and test out updates before deploying to production, we recommend having a staging environment. Developers and QA specialists can use this environment to check if everything is working as intended then ship to production once approved. We recommend `Gigalixir` to set this up. Our previous projects have used `Heroku` but it is no longer recommended. If the project is mostly a front-end project, we recommend `Netlify`.
+To preview and test out updates before deploying to production, we recommend having a staging environment. Developers and QA specialists can use this environment to check if everything is working as intended then ship to production once approved. We recommend `Gigalixir` to set this up. Our previous projects have used `Heroku` but it is no longer recommended. If the project is mostly a front-end project, we recommend `Netlify` or `Vercel`.
