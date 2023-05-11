@@ -12,6 +12,7 @@ These are the standards and practices we adopt when working with the tools menti
 - [Writing Readable Commits](/standards/github/writing-readable-commits.md)
 - [Reviewer Checklist](/standards/github/reviewer-checklist.md)
 - [Updating Pull Requests](/standards/github/updating-pull-requests.md)
+- [Code Review and Merging Etiquette](/standards/github/code-review-and-merging-etiquette.md)
 
 ## Project Setup
 
