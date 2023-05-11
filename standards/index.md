@@ -7,8 +7,10 @@ These are the standards and practices we adopt when working with the tools menti
 
 ## Github
 
+- [Branch Naming Conventions](/standards/github/branch-naming-conventions.md)
 - [Creating Effective Pull Requests](/standards/github/creating-effective-pull-requests.md)
 - [Writing Readable Commits](/standards/github/writing-readable-commits.md)
+- [Reviewer Checklist](/standards/github/reviewer-checklist.md)
 - [Updating Pull Requests](/standards/github/updating-pull-requests.md)
 
 ## Project Setup
