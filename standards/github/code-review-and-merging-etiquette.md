@@ -9,3 +9,7 @@ Reviewers might not always have the time to check for updates in the codebase. T
 	- ✅ I want to hear everyone's thoughts on including the following rules to our linter. I've done a basic config in this PR and will test it out further if you guys agree.
 	- ✅ This is my progress so far on implementing the comments section. I would appreciate some feedback especially on the queries I used.
 	- ✅ I've been able to fix the invoice report so far but I'm a bit confused if this behavior is what we want. Can you have a look?
+
+## Require approvals before merging
+
+We recommend at least 1 approval before merging work into the main branches. We can enforce this using github's branch protection options.
