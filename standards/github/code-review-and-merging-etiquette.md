@@ -13,3 +13,14 @@ Reviewers might not always have the time to check for updates in the codebase. T
 ## Require approvals before merging
 
 We recommend at least 1 approval before merging work into the main branches. We can enforce this using github's branch protection options.
+
+## Approver decides when PR is ready to merge
+
+While it's the author's responsibility to work on and update a PR, we advise the approver to be the one responsible for deciding when to merge it in. Approving means that you trust that the PR is in good shape and safe to deploy.
+
+## Assign a main reviewer
+
+While anyone on the team should be free to review, we recommended assigning a main reviewer who makes sure that all comments have been addressed. The main reviewer should have the final say on when to merge in a PR. This main reviewer can be:
+- ✅ senior developer
+- ✅ release manager
+- ✅ developer with the most expertise on the related part of the codebase
