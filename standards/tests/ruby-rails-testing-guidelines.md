@@ -30,11 +30,12 @@ Request specs test controllers as if doing an actual request. These specs tend t
 - ❌ Rendering of elements on the page (more for end-to-end testing)
   ```ruby
   RSpec.describe "UsersController", type: :request do
-    describe "request list of all users" do
-      user = User.create(name: “Test user”)
-      get users_path
-      expect(response).to be_successful
-      expect(response.body).to include(“Test user”)
+    describe "GET #users" do
+      it "renders the user" do
+        user = User.create(name: “Test user”)
+        get users_path
+        expect(response.body).to include(“Test user”)
+      end
     end
   end
   ```
