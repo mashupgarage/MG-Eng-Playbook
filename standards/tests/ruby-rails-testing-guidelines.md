@@ -4,16 +4,21 @@ When testing code written in Ruby on Rails, there are some scenarios or points o
 
 ## Avoid controller specs
 
-Controller specs are used to test controllers specifically the templates rendered, instance variables passed, or redirects. They are no longer recommended by RSpec and should only be used if dealing with an old project with existing controller tests.
+Controller specs are used to test controllers specifically the templates rendered, instance variables passed, or redirects by simulating a controller object. They are no longer recommended by RSpec (use request specs instead) and should only be used if dealing with an old project with existing controller tests.
 
 ```ruby
-RSpec.describe UsersController do
+RSpec.describe UsersController, type: :controller do
   describe "GET index" do
     it "assigns @users" do
       user = User.create
       get :index
       expect(assigns(:team)).to eq([team])
     end
+
+		it "renders the index template" do
+		  get :index
+			expect(response).to render_template("index")
+		end
   end
 end
 ```
