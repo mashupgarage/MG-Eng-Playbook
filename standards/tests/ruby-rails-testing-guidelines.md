@@ -2,6 +2,25 @@
 
 When testing code written in Ruby on Rails, there are some scenarios or points of confusion that we encounter from time to time. Here are some guidelines we follow to make testing more effective.
 
+## Avoid controller specs
+
+Controller specs are used to test controllers specifically the templates rendered, instance variables passed, or redirects. They are no longer recommended by RSpec and should only be used if dealing with an old project with existing controller tests.
+
+    RSpec.describe UsersController do
+	  describe "GET index" do
+		it "assigns @users" do
+		  user = User.create
+		  get :index
+		  expect(assigns(:users)).to eq([user])
+		end
+
+		it "renders the index template" do
+		  get :index
+		  expect(response).to render_template("index")
+		end
+	  end
+	end
+
 ## Avoid controller testing pitfalls
 
 Controller specs tend to be slow because they deal with rendering full pages and when overused can result in a slow running CI. Aside from that controller specs may overlap with end-to-end testing (also called feature specs) which is usually handled with different tools (e.g. Ghost Inspector, Cypress). Use controller specs in the following scenarios:
