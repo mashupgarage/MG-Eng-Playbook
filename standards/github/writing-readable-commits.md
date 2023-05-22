@@ -38,11 +38,11 @@ Commits serve as documentation of the step by step process done in creating a PR
 
 - Clear and readable commit messages serve as a form of communication among team members and help identify the specific changes that introduced a problem in a quick glance when looking at the commits, making it easier to narrow down the cause and fix it efficiently. This also helps when refactoring or making significant modifications, descriptive commit messages help convey the intent behind the changes.
 - These are some example do's and dont's
-- ❌ Implements recovery password
-- ❌ Adds more tests
-- ✅ Adds password recovery form
-- ✅ Adds password recovery service
-- ✅ Implement send email for password recovery
-- ✅ Adds rspecs for failing password recovery
+  - ❌ Implements recovery password
+  - ❌ Adds more tests
+  - ✅ Adds password recovery form
+  - ✅ Adds password recovery service
+  - ✅ Implement send email for password recovery
+  - ✅ Adds rspecs for failing password recovery
 - Notice that the example above also implements the atomic principle that we described before. This is essential and will helps alot
   during debugging process.
