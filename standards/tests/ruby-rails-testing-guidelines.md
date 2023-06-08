@@ -61,3 +61,39 @@ Request specs test controllers as if doing an actual request. These specs tend t
       end
     end
   ```
+
+## Use request specs to test API controllers
+
+Request specs are more recommended for API controllers since these usually just return JSON format responses instead of entire pages. Use to test the following:
+- ✅ response status and body
+  ```ruby
+    RSpec.describe "Api::ArticlesController", type: :request do
+      describe "POST #create" do
+        let(:user) { User.create(name: “Test user”) }
+        let(:headers) { "Authorization" => user.jwt_encode }
+        let(:params) { { title: "Test Article", body: "This is the content" } }
+
+        it "creates an article" do
+          post "/api/articles", headers: headers, params: params
+          expect(response.status).to eq 201
+          expect(JSON.parse(response.body)["data"]["attributes"]["body"]).to eq "This is the content"
+        end
+      end
+    end
+  ```
+- ❌ API logic (Should focus on response instead of controller logic. If complex logic, extract to a service and test that)
+  ```ruby
+    RSpec.describe "Api::ArticlesController", type: :request do
+      describe "POST #create" do
+        let(:user) { User.create(name: “Test user”) }
+        let(:headers) { "Authorization" => user.jwt_encode }
+        let(:params) { { title: "Test Article", body: "This is the content" } }
+
+        it "creates an article" do
+          post "/api/articles", headers: headers, params: params
+          article = Article.last
+          expect(article.title).to eq "Test Article"
+        end
+      end
+    end
+  ```
