@@ -27,6 +27,16 @@ end
 
 Request specs test controllers as if doing an actual request. These specs tend to be slow because they deal with rendering full pages and when overused can result in a slow running CI. Aside from that request specs may overlap with end-to-end testing (also called feature specs) which is usually handled with different tools (e.g. Ghost Inspector, Cypress). Use request specs to test controllers in the following scenarios:
 - ✅ routing (e.g. does it redirect, can a certain user access the page )
+  ```ruby
+  RSpec.describe "PostsController", type: :request do
+    describe "GET #new" do
+      it "redirects to dashboard if user is not active" do
+        get new_posts_path
+        expect(response).to redirect_to(dashboard_path)
+      end
+    end
+  end
+  ```
 - ❌ Rendering of elements on the page (more for end-to-end testing)
   ```ruby
   RSpec.describe "UsersController", type: :request do
@@ -39,4 +49,15 @@ Request specs test controllers as if doing an actual request. These specs tend t
     end
   end
   ```
-- ❌ controller action logic (if your actions have complex logic better to extract to a service and test that)
+- ❌ controller action logic (Basic actions are straightforward enough and don't need to be tested. If your actions have complex logic better to extract to a service and test that)
+  ```ruby
+    RSpec.describe "ArticlesController", type: :request do
+      describe "POST #create" do
+        it "creates an article" do
+          post article_path(params: { article: { title: "Test Article", body: "This is the content" } })
+          article = Article.last
+          expect(article.title).to eq "Test Article"
+        end
+      end
+    end
+  ```
