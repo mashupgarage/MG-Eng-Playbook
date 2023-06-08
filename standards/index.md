@@ -17,3 +17,7 @@ These are the standards and practices we adopt when working with the tools menti
 ## Project Setup
 
 - [Tech Services Checklist](/standards/project-setup/tech-services-checklist.md)
+
+## Other
+
+- [Suggested Readings](/standards/suggested-readings.md)
