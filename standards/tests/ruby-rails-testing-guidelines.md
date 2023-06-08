@@ -97,3 +97,24 @@ Request specs are more recommended for API controllers since these usually just 
       end
     end
   ```
+## Use context blocks to set different scenarios
+
+Context blocks are useful to describe different testing scenarios in human readable format. It’s recommended that these contexts start with the word `with` (or `without`) or `when`. These are some useful information to put into the context:
+- ✅ amounts for computation
+  ```ruby
+    context "with $5000 principal outstanding / $500 interest outstanding / $10000 repayment" do
+      # tests in here
+    end
+  ```
+- ✅ statuses
+  ```ruby
+    context "when post has pending status" do
+      # tests in here
+    end
+  ```
+- ✅ conditions
+  ```ruby
+    context "without valid authentication" do
+      # tests in here
+    end
+  ```
