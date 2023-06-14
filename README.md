@@ -5,3 +5,4 @@ MG engineering playbook repository
 ## [Tools](/tools/index.md)
 ## [Tech Recipes](/tech/index.md)
 ## [Standards and Practices](/standards/index.md)
+## [Dev Competencies](/dev-competencies/index.md)
