@@ -118,3 +118,40 @@ Context blocks are useful to describe different testing scenarios in human reada
       # tests in here
     end
   ```
+
+## Prefer let (or let!) over instance variables
+
+Avoid instance variables because their values have potential to leak between tests which may cause tests to fail unexpectedly. Prefer to set values with `let` or `let!`. The key difference between them is `let` is lazily evaluated in test body while `let!` is immediately evaluated before test body. When in doubt, use `let!`.
+- ❌ Instance variables in before blocks
+  ```ruby
+    before do
+      @user = User.create(name: "John")
+    end
+  ```
+- ✅ `let` for data with no dependencies
+  ```ruby
+    let(:user) { User.create(name: "John") }
+  ```
+- ✅ `let!` for data with dependencies
+  ```ruby
+    let(:user) { User.create(name: "John") }
+    let!(:post) { user.posts.create(title: "My First Post") }
+    result = publish(user, post)
+
+    expect(user.published_posts.count).to eq 2
+  ```
+- ✅ before block for data with dependencies but no explicit reference
+  ```ruby
+    let(:user) { User.create(name: "John") }
+
+    before do
+      user.posts.create(title: "My First Post")
+    end
+
+    result = delete_all_posts(user)
+
+    expect(user.posts.count).to eq 0
+  ```
+
+### References
+- <https://www.codewithjason.com/difference-let-let-instance-variables-rspec/>
