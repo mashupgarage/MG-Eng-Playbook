@@ -47,3 +47,16 @@ Applies the DRY principle on code written when applicable.
 
 - Writes reusable code.
 - Understands when the DRY principle is suitable and when it is not.
+
+## Research
+
+### Description
+
+Finds solutions for problems or issues encountered related to code.
+
+### Examples
+
+- Knows where to look for necessary data and filters out irrelevant ones.
+- Reads and understands documentation.
+- Able to judge if a solution is suitable or efficient.
+- Documents and communicates findings clearly.
