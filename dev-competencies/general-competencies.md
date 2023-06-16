@@ -25,7 +25,18 @@ Maintains an orderly file structure that is easy to navigate
 - Knows where to put files such that they are easy to find
 - Understands scaling and knows when to start reorganizing
 
-## Representing Program Logic (notes, flow chart, pseudocode)
+## Program Documentation
+
+### Description
+
+Explains the flow of a program either in written or graphical form
+
+### Examples
+
+- Writes down notes that explains how a program works
+- Is able to express program flow in diagrams such as flow charts
+- Can explain what a program does through pseudo code
+
 ## Don't Repeat Yourself (DRY)
 ## Data Structures
 ## Algorithms and Complexity
