@@ -40,12 +40,15 @@ Anything else work related that are not directly related to tickets like attendi
 When tasks span more than a day or are done in installments add some states that give indication of the progress of your tasks. A task can be in one of the following states:
 
 ### Started
+The task does not have any significant progress yet.
 - ✅ (TICKET) Started working on Admin sees updated risk codes (example.com/ticket-005)
 - ✅ (OTHER) Started writing a guide on 2FA in dev wiki
 ### Work in Progress (WIP)
+The task has significant progress but there are still some stuff to do.
 - ✅ (TICKET) (WIP) Working on Admin can archive posts (example.com/ticket-006)
 - ✅ (STUDY) (WIP) Reading on best practices for writing ruby services
 ### Done
+The task has been completed. For tickets, they should be counted as done once the PR has enough approvals (will vary based on project approval process).
 - ✅ (TICKET) Done with design for updated admin nav bar (example.com/ticket-007)
 - ✅ (OTHER) Completed first draft of github guide
 
