@@ -10,7 +10,7 @@ As much as possible, make sure to list down everything work related you did for 
 Anything directly related to working on tickets including development, paring, and testing. You can use the ticket name or describe the task. It also helps to put a url that links directly to the ticket.
 - ✅ (TICKET) Started working on admin sees new dashboard design (example.com/ticket-001)
 - ✅ (TICKET) Done with admin sees read receipts for emails (example.com/ticket-002)
-- ✅ (TICKET) (WIP) Investigate missing invoices from Xero (example.com/ticket-003)
+- ✅ (TICKET) (WIP) Investigate missing invoices (example.com/ticket-003)
 - ✅ (TICKET) Done with User Account Improvements part 1 (example.com/ticket-004)
 
 ### RELEASE
@@ -48,3 +48,31 @@ When tasks span more than a day or are done in installments add some states that
 ### Done
 - ✅ (TICKET) Done with design for updated admin nav bar (example.com/ticket-007)
 - ✅ (OTHER) Completed first draft of github guide
+
+## Communicate blockers or issues encountered
+
+A blocker is anything that has a significant effect on the time taken to do a ticket. If it’s something that makes you go beyond initial estimate then it’s a blocker. We should communicate these openly so that we know why a ticket went beyond its initial estimate and to know if any devs need help to get unblocked. Some examples:
+
+### Waiting for something from client side
+- Waiting for confirmation from admin team regarding repayment adjustments
+- Still following up client on credentials we need for Algolia search integration
+- There are some details regarding invoice approval that aren’t clear
+
+### Unexpected learning curve for something related to card (beyond initial learning curve estimate)
+- The Salesforce API had an update and some syntax changed
+- I had to study the pagination gem closely because it had a issue with dealing with filtered data
+- Devise gem had a special implementation that I had to study in more depth
+- The task needed to use a reducer which I’m unfamiliar with
+
+### Dealing with some issues with previous (or current) implementation
+- I had to refactor the existing code because it was not flexible to deal with new filter
+- Previous API was bugged and I had to do a workaround
+
+### Unforeseen additional tasks to do in ticket (sometimes solution is just to make new ticket)
+- There was a change in the design which wasn’t suitable for current implementation
+- There was a last minute change of formula for the computations that changes how data is displayed in the page
+- The Twilio API was down for most of the day
+
+### External Factors
+- There was a power interruption which delayed progress on tasks
+- Machine frequently slowed down because of a docker issue
