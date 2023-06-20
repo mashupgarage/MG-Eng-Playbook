@@ -49,6 +49,20 @@ When tasks span more than a day or are done in installments add some states that
 - ✅ (TICKET) Done with design for updated admin nav bar (example.com/ticket-007)
 - ✅ (OTHER) Completed first draft of github guide
 
+## Indicate subtasks
+
+Sometimes the task description doesn't give the whole idea of what happened but would be too long if we put everything in that description. In these cases it's useful to list down the specific subtasks under that task. Some examples:
+- ✅ (TICKET) Started working on admin sees new dashboard design (example.com/ticket-001)
+    - Organized css of page
+    - Consulted designer on some sections
+- ✅ (TICKET) (WIP) investigate missing invoices (example.com/ticket-003)
+    - Paired with Ady to address bug with invoice API
+- ✅ (TICKET) Done with Drawdown Improvements (example.com/ticket-004)
+    - Helped test drawdown improvements on staging
+- ✅ (OTHER) (WIP) Update webpack setup
+    - Updated typescript version
+    - Reconfigured breaking changes on new webpack version
+
 ## Communicate blockers or issues encountered
 
 A blocker is anything that has a significant effect on the time taken to do a ticket. If it’s something that makes you go beyond initial estimate then it’s a blocker. We should communicate these openly so that we know why a ticket went beyond its initial estimate and to know if any devs need help to get unblocked. Some examples:
