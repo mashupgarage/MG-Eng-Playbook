@@ -6,4 +6,13 @@ A stand up meeting (shortened to stand up) is a communication tool used to keep 
 
 As much as possible, make sure to list down everything work related you did for the day. These can fall into categories like the following:
 
-- TICKET - anything directly related to working on tickets including development, paring, and testing. You can use the ticket name to label this or describe the task. It also helps to put a url that link to the ticket.
+### TICKET
+Anything directly related to working on tickets including development, paring, and testing. You can use the ticket name describe the task. It also helps to put a url that links directly to the ticket.
+
+### RELEASE
+
+### MEETING
+
+### STUDY
+
+### OTHER
