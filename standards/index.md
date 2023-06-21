@@ -21,3 +21,4 @@ These are the standards and practices we adopt when working with the tools menti
 ## Other
 
 - [Suggested Readings](/standards/suggested-readings.md)
+- [Stand Up/Stand Down Guide](/standards/stand-up-guide.md)
