@@ -45,6 +45,24 @@ At some point our PRs will be out of sync with other branches and we will have t
 
 - Onto means the branch whose commits you want to put before the target branch
 
+## Rebase Do's and Don'ts
+
+- ✅ Branch with no comments
+- ✅ Approved branch
+- ❌ Nested branch
+  ```
+  develop <- feature/dashboard <- feature/posts <- feature/comments
+  ```
+  Avoid this
+  ```
+  git checkout feature/comments
+  git rebase develop
+	git push --force-with-lease
+  ```
+  Since feature/dashboard and feature/posts don't have develop's changes yet, feature/comments will not be compatible to merge into them later.
+- ❌ Branch authored by someone else
+- ❌ Parent branch
+
 ## Which should I use
 
 Generally we prefer to use merge. Use rebase in the following cases:
