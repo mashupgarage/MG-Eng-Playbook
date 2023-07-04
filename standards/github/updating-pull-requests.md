@@ -141,12 +141,4 @@ At some point our PRs will be out of sync with other branches and we will have t
 - `develop`/`master`/`main` are public branches so avoid rebasing those
 - Release branches are also public branches so avoid rebase for those
 - Branches not authored by you are public branches
-- Feature branches can also be public in some scenarios, even if you authored them. For example this setup, while not exactly ideal, can happen
-
-    ```
-    develop <- feature-1 <- feature-2 <- feature-3
-    ```
-
-    - feature-1 and feature-2 are public because they branched out from other branches. Avoid rebasing these branches to avoid conflicts. Prefer merge for this case if you need to update.
-    - It’s especially important to avoid rebase if these PRs are separate tickets, to preserve prior merge commits and leave traces of where these started/ended
-    - feature-3 is not public so rebase should be fine
+- Feature branches can also be public if others branched out from it
