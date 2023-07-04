@@ -62,8 +62,10 @@ At some point our PRs will be out of sync with other branches and we will have t
 ## Rebase Do's and Don'ts
 
 - ✅ Branch with no comments
+
   When a branch is in WIP stage, rebase should be fine. You can use it to clean up commits and update to develop without worry of breaking commits for anyone else.
 - ✅ Approved branch
+
   Once branch has passed review and is ready to merge, you can use a rebase to update and clean up the branch before merging to develop.
 - ❌ Nested branch
   ```
