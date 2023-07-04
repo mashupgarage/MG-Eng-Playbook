@@ -80,7 +80,7 @@ At some point our PRs will be out of sync with other branches and we will have t
   git push --force-with-lease
   ```
 
-  Since feature/dashboard and feature/posts don't have develop's changes yet, feature/comments will not be compatible to merge into them later. Update via merge instead (see `Updating nested branches via merge` above).
+  Since `feature/dashboard` and `feature/posts` don't have develop's changes yet, `feature/comments` will not be compatible to merge into them later. Update via merge instead (see `Updating nested branches via merge` above).
 - ❌ Branch authored by someone else
   ```
   develop <- feature/dashboard (written by teammate)
@@ -110,7 +110,7 @@ At some point our PRs will be out of sync with other branches and we will have t
   git rebase develop
   git push --force-with-lease
   ```
-  Rebase will create new commits in `feature/dashboard` and `feature/posts` and `feature/css-layout` will still look for the old commit references which is prone to conflicts. Prefer to update via merge.
+  Rebase will create new commits in `feature/dashboard` but `feature/posts` and `feature/css-layout` will still look for the old commit references which is prone to conflicts. Prefer to update via merge.
 - ❌ Nested rebase
   ```
   develop <- feature/dashboard <- feature/posts <- feature/comments
