@@ -76,7 +76,7 @@ At some point our PRs will be out of sync with other branches and we will have t
   git push --force-with-lease
   ```
 
-  Since feature/dashboard and feature/posts don't have develop's changes yet, feature/comments will not be compatible to merge into them later.
+  Since feature/dashboard and feature/posts don't have develop's changes yet, feature/comments will not be compatible to merge into them later. Update via merge instead (see `Updating nested branches via merge` above).
 - ❌ Branch authored by someone else
 - ❌ Parent branch
 
