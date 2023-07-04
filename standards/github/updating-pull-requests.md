@@ -78,7 +78,35 @@ At some point our PRs will be out of sync with other branches and we will have t
 
   Since feature/dashboard and feature/posts don't have develop's changes yet, feature/comments will not be compatible to merge into them later. Update via merge instead (see `Updating nested branches via merge` above).
 - ❌ Branch authored by someone else
+  ```
+  develop <- feature/dashboard (written by teammate)
+  ```
+
+  Avoid doing this
+
+  ```
+  git checkout feature/dashboard
+  git rebase develop
+  git push --force-with-lease
+  ```
+
+  This will create new commits in `feature/dashboard` which will not be compatible with the commits in the local branch when they pull the updated version. Prefer merge instead.
 - ❌ Parent branch
+  ```
+                                feature/posts
+                               /
+  develop <- feature/dashboard
+                               \
+                                feature/css-layout
+  ```
+  Avoid doing this
+
+  ```
+  git checkout feature/dashboard
+  git rebase develop
+  git push --force-with-lease
+  ```
+  Rebase will create new commits in `feature/dashboard` and `feature/posts` and `feature/css-layout` will still look for the old commit references which is prone to conflicts. Prefer to update via merge.
 
 ## Which should I use
 
