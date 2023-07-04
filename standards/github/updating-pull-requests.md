@@ -53,12 +53,15 @@ At some point our PRs will be out of sync with other branches and we will have t
   ```
   develop <- feature/dashboard <- feature/posts <- feature/comments
   ```
-  Avoid this
+
+  Avoid doing this
+
   ```
   git checkout feature/comments
   git rebase develop
-	git push --force-with-lease
+  git push --force-with-lease
   ```
+
   Since feature/dashboard and feature/posts don't have develop's changes yet, feature/comments will not be compatible to merge into them later.
 - ❌ Branch authored by someone else
 - ❌ Parent branch
