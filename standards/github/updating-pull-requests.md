@@ -132,13 +132,6 @@ At some point our PRs will be out of sync with other branches and we will have t
   Note that this may still work without issues in some cases but is very prone to conflicts especially if branch is really outdated. For big branches it's not worth the hassle. Update via merge instead (see `Updating nested branches via merge` above).
 
 
-## Which should I use
-
-Generally we prefer to use merge. Use rebase in the following cases:
-- PR has no review comments yet
-- PR is already approved and is about to be merged into develop
-- PR does not involve a public branch (See Golden Rule of Rebasing)
-
 ## Golden Rule of Rebasing
 
 [Merging vs. Rebasing | Atlassian Git Tutorial](https://www.atlassian.com/git/tutorials/merging-vs-rebasing#the-golden-rule-of-rebasing)
