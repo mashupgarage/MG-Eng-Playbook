@@ -18,13 +18,26 @@ At some point our PRs will be out of sync with other branches and we will have t
 	```
 
 - Into means the branch that will receive develop’s commits
-- Alternatively merging `feature-1` into `feature-2`
+- Updating nested branches via merge
+  Given branch structure:
+  ```
+  develop <- feature/dashboard <- feature/posts <- feature/comments
+  ```
+  Update each branch
+  ```bash
+  # make sure develop is updated
+  git checkout feature/dashboard
+  git merge develop
+  git push
 
-	```
-	git checkout feature-2
-	git merge feature-1
-	git push
-	```
+  git checkout feature/posts
+  git merge feature/dashboard
+  git push
+
+  git checkout feature/comments
+  git merge feature/posts
+  git push
+  ```
 
 ## Rebase
 
