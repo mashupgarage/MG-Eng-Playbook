@@ -19,6 +19,7 @@ At some point our PRs will be out of sync with other branches and we will have t
 
 - Into means the branch that will receive develop’s commits
 - Updating nested branches via merge
+
   Given branch structure:
   ```
   develop <- feature/dashboard <- feature/posts <- feature/comments
