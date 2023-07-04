@@ -107,6 +107,26 @@ At some point our PRs will be out of sync with other branches and we will have t
   git push --force-with-lease
   ```
   Rebase will create new commits in `feature/dashboard` and `feature/posts` and `feature/css-layout` will still look for the old commit references which is prone to conflicts. Prefer to update via merge.
+- ❌ Nested rebase
+  ```
+  develop <- feature/dashboard <- feature/posts <- feature/comments
+  ```
+  Avoid doing this
+  ```bash
+  git checkout feature/dashboard
+  git rebase develop
+  git push --force-with-lease
+
+  git checkout feature/posts
+  git rebase feature/dashboard
+  git push --force-with-lease
+
+  git checkout feature/comments
+  git rebase feature/posts
+  git push --force-with-lease
+  ```
+  Note that this may still work without issues in some cases but is very prone to conflicts especially if branch is really outdated. For big branches it's not worth the hassle. Update via merge instead (see `Updating nested branches via merge` above).
+
 
 ## Which should I use
 
