@@ -94,7 +94,7 @@ At some point our PRs will be out of sync with other branches and we will have t
   git push --force-with-lease
   ```
 
-  This will create new commits in `feature/dashboard` which will not be compatible with the commits in the local branch when they pull the updated version. Prefer merge instead.
+  This will create new commits in `feature/dashboard` which will not be compatible with the commits in the author's local branch when they pull the updated version. Prefer to update via merge instead.
 - ❌ Parent branch
   ```
                                 feature/posts
