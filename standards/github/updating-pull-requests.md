@@ -129,7 +129,7 @@ At some point our PRs will be out of sync with other branches and we will have t
   git rebase feature/posts
   git push --force-with-lease
   ```
-  Note that this may still work without issues in some cases but is very prone to conflicts especially if branch is really outdated. For big branches it's not worth the hassle. Update via merge instead (see `Updating nested branches via merge` above).
+  Note that this may still work without issues in some cases but is very sensitive to conflicts especially if branch is really outdated. Something as simple as a space can cause conflicts and sometimes duplicated commits. For big branches it's not worth the hassle. Update via merge instead (see `Updating nested branches via merge` above).
 
 
 ## Golden Rule of Rebasing
