@@ -42,3 +42,22 @@ One functional practice is to avoid changing values, also called mutating, once 
     console.log(myVar) // will be 3
     ```
     Var allows both reassignment and redeclaration. This can potentially cause bugs and rarely will `var` be preferred over `const` and `let`. You can forget about `var``.
+
+## Use pure versions of functions
+
+For JS code to functional, it needs to use pure functions. When using predefined functions from JS libaries, as much as possible use functions that don't modify the original thing.
+
+- ❌ push()
+    ```javascript
+    const arr = [1,2,3]
+    arr.push(4) // [1,2,3,4]
+
+    console.log(arr) // [1,2,3,4]
+    ```
+- ✅ spread operator (...)
+    ```
+    const arr1 = [1,2,3]
+    const arr2 = [...arr1, 4] // [1,2,3,4]
+
+    console.log(arr1) // [1,2,3]
+    ```
