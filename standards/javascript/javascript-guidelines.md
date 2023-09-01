@@ -2,9 +2,18 @@
 
 The Javascript language is continuously changing and adding more ways to do things, which have their own nuances and sometimes weird behavior. To mitigate possible confusion we have a set of standards based on our years of experience writing Javascript. These ideas can serve as guiding principles to rules we apply in linters like eslint.
 
+## Go Functional
+
+There are several paradigms used in Javascript: procedural, object oriented, and functional. At MG we prefer to write Javascript towards the functional style. JS code written should generally follow these rules:
+
+- Avoid mutating or changing values that are already set
+- Use pure functions: basically functions that have predictable outputs given certain input and don't have side effects
+
+So when writing code, it's important to always ask "Is this the functional way to do this?".
+
 ## Prefer const variables
 
-At MG we adopt some practices from functional programming in JS code. One of these practices is to avoid changing values, also called mutating, once they are set to make them more predictable and easier to debug. Generally, use const, avoid let, and forget about var.
+One functional practice is to avoid changing values, also called mutating, once they are set to make them more predictable and easier to debug. Generally, use const, avoid let, and forget about var.
 
 - ✅ const declaration
     ```javascript
