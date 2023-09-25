@@ -91,3 +91,60 @@ For JS code to functional, it needs to use pure functions. When using predefined
     console.log(arr) // [4,1,3,2]
     console.log(updatedArr) // [1,2,3,4]
     ```
+
+## Avoid for loops
+
+For loops are more of a procedural programming style and usually lead to mutable patterns of doing things. They should be avoided in favor of using more modern iteration functions such as forEach, map, or reduce.
+
+- ❌ for loop printing
+  ```javascript
+  for(let i = 0; i < 5; i +=1) {
+    console.log(i)
+  }
+  ```
+- ✅ forEach()
+  ```javascript
+  [1,2,3,4,5].forEach((item) => {
+    console.log(item)
+  })
+  ```
+- ❌ updating array values with for
+  ```javascript
+  let arr = [1,2,3]
+
+  for(let i = 0; i < 3; i +=1) {
+    arr[i] = arr[i] * 2
+  }
+
+  console.log(arr) // [2,4,6]
+  ```
+- ✅ map()
+  ```javascript
+  const updatedArr = [1,2,3].map((item) => {
+    return item * 2
+  })
+
+  console.log(updatedArr) // [2,4,6]
+  ```
+- ❌ combining items with for
+  ```javascript
+  const arr = [1,2,3]
+  let sum = 0
+
+  for(let i = 0; i < 3; i +=1) {
+    sum += arr[i]
+  }
+
+  console.log(sum) // 6
+  ```
+- ✅ reduce()
+  ```javascript
+  const arr = [1,2,3]
+  const initialSum = 0
+
+  const sum = arr.reduce((accumulator, item) => {
+    return accumulator + item
+  }, initialSum)
+
+  console.log(sum) // 6
+  ```
