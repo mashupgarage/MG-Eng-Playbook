@@ -86,7 +86,7 @@ For JS code to functional, it needs to use pure functions. When using predefined
 - ✅ spread then sort
     ```javascript
     const arr = [4,1,3,2]
-    const updatedArr = [...arr].sort
+    const updatedArr = [...arr].sort()
 
     console.log(arr) // [4,1,3,2]
     console.log(updatedArr) // [1,2,3,4]
