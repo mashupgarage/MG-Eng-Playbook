@@ -148,3 +148,34 @@ For loops are more of a procedural programming style and usually lead to mutable
 
   console.log(sum) // 6
   ```
+
+## Use a consistent promise style
+
+Promises have become a common way to handle asynchronous code in javascript and there are two key ways: promise chains and async-await. These two styles can actually be used together but we don't recommend it. It's better to be consistent and just stick with one of them, depending on the team's conventions.
+- ✅ async-await
+  ```javascript
+  const fetchPosts = async () => {
+    try {
+      const posts = await fetch()
+      console.log(posts)
+    } catch(error) {
+      console.error(error)
+    }
+  }
+  ```
+- ✅ promise chains
+  ```javascript
+  const fetchPosts = () => {
+    fetch()
+      .then((data) => console.log(data))
+      .catch((error) => console.error(error))
+  }
+  ```
+- ❌ combination of both
+  ```javascript
+  const fetchPosts = async () => {
+    await fetch()
+            .then((data) => console.log(data))
+            .catch((error) => console.error(error))
+  }
+  ```
