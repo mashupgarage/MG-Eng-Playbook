@@ -24,7 +24,7 @@ One functional practice is to avoid changing values, also called mutating, once 
     console.log(myVar) // will still be 1
     ```
     Constant variables do not allow reassignment nor redeclaration. This works well to avoid mutating and should be the default way to assign.
-- ❌ let declaration
+- ⚠️ let declaration
     ```javascript
     let myVar = 1
     myVar = 2
@@ -41,7 +41,7 @@ One functional practice is to avoid changing values, also called mutating, once 
 
     console.log(myVar) // will be 3
     ```
-    Var allows both reassignment and redeclaration. This can potentially cause bugs and rarely will `var` be preferred over `const` and `let`. You can forget about `var``.
+    Var allows both reassignment and redeclaration. This can potentially cause bugs and rarely will `var` be preferred over `const` and `let`. You can forget about `var`.
 
 ## Use pure versions of functions
 
