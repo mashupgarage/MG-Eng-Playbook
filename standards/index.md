@@ -14,6 +14,9 @@ These are the standards and practices we adopt when working with the tools menti
 - [Updating Pull Requests](/standards/github/updating-pull-requests.md)
 - [Code Review and Merging Etiquette](/standards/github/code-review-and-merging-etiquette.md)
 
+## Javascript
+- [Javascript Guidelines](/standards/javascript/javascript-guidelines.md)
+
 ## Project Setup
 
 - [Tech Services Checklist](/standards/project-setup/tech-services-checklist.md)
