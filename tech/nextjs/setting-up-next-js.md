@@ -28,6 +28,35 @@ There are two ways to start your Next.js app. Automatic and Manual installation.
     What import alias would you like configured? @/*
   ```
 - For optional `src/` directory, you have the choice of whether you want to create an `src` folder to separate your code from configuration files.
+  - Choosing `No`
+    ```
+      root/
+      ├── node_modules/
+      ├── app/
+      │   ├── page.js
+      │   ├── layout.js
+      ├── styles/
+      │   ├── main.module.css
+      ├── public/
+      │   ├── images/
+      │   ├── favicon.ico
+      ├── package.json
+    ```
+  - Choosing `Yes`
+    ```
+      root/
+      ├── node_modules/
+      ├── src/
+      │   ├── app/
+      │   │   ├── page.js
+      │   │   ├── layout.js
+      │   ├── styles/
+      │   │   ├── main.module.css
+      │   ├── public/
+      │   │   ├── images/
+      │   │   ├── favicon.ico
+      ├── package.json
+    ```
 - `App Router` is recommended since you are installing Next.js 13 or later.
 - For import alias you can choose `No` to use Standard Import or `Yes` to use Import Alias.
   - Standard Import (Without Aliases):
