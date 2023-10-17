@@ -4,6 +4,7 @@ These are the standards and practices we adopt when working with the tools menti
 
 - [Why do we Test?](/standards/tests/why-write-tests.md)
 - [General Testing Guidelines](/standards/tests/general-testing-guidelines.md)
+- [Ruby/Rails Testing Guidelines](/standards/tests/ruby-rails-testing-guidelines.md)
 
 ## Github
 
@@ -13,6 +14,10 @@ These are the standards and practices we adopt when working with the tools menti
 - [Reviewer Checklist](/standards/github/reviewer-checklist.md)
 - [Updating Pull Requests](/standards/github/updating-pull-requests.md)
 - [Code Review and Merging Etiquette](/standards/github/code-review-and-merging-etiquette.md)
+
+## Javascript
+
+- [Javascript Guidelines](/standards/javascript/javascript-guidelines.md)
 
 ## Project Setup
 
