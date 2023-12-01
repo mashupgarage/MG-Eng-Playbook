@@ -58,6 +58,10 @@ We import the API functions with a different name (we recommend prepending 'defa
 
 ## Write your components with accessibility in mind
 
+## data-testid should be a last resort
+
+When testing react components the usual tendency is to attach test ids to the elements to look for them. The test id, while it provides straightforward access of specific elements, slightly detracts from the philosophy of testing like a user does because user isn't aware of these. Always start with queries that resemble how users (or assistive technology) find things in the UI then use data-testid only when none can apply. For more info check out the [documentation](https://testing-library.com/docs/queries/about#priority).
+
 ## Add visible loading states
 
 ## Use react-select-event to test react-select elements
