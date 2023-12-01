@@ -58,6 +58,12 @@ We import the API functions with a different name (we recommend prepending 'defa
 
 ## Write your components with accessibility in mind
 
+When we talk about testing how a user would use application, that should include users that use accessibility technology such as screen readers. In its core, the goal of a screen reader is to find content and read them to user which interects with the goal of react testing. Hence, following the best practices for accessibility helps testability as well.
+
+### Apply proper labels
+
+### Use clearly defined roles
+
 ## data-testid should be a last resort
 
 When testing react components the usual tendency is to attach test ids to the elements to look for them. The test id, while it provides straightforward access of specific elements, slightly detracts from the philosophy of testing like a user does because user isn't aware of these. Always start with queries that resemble how users (or assistive technology) find things in the UI then use data-testid only when none can apply. For more info check out the [documentation](https://testing-library.com/docs/queries/about#priority).
