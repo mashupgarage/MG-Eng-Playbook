@@ -62,6 +62,42 @@ When we talk about testing how a user would use application, that should include
 
 ### Apply proper labels
 
+Users tend to identify form elements like input fields by the text associated with them. To write our components in a way consistent with this behavior, it's important to apply proper labelling using label tags:
+
+- ❌ labels that aren't linked
+  ```Typescript
+    <label>Name</label>
+    <input type='text' />
+  ```
+
+- ✅ linking label with htmlFor
+  ```Typescript
+    <label htmlFor='name'>Name</label>
+    <input type='text' id='name' />
+    <label htmlFor='age'>Age</label>
+    <input type='number' id='age' />
+  ```
+
+- ✅ linking non labels with aria-labelledby
+  ```Typescript
+    <div id='name-label'>
+    <input type='text' aria-labelledby='name-label' />
+  ```
+
+- ✅ nesting element in label tag
+  ```Typescript
+    <label>
+      <input type='text' />
+      Name
+    </label>
+  ```
+
+We can then get these using the label text queries:
+
+```Typescript
+  expect(getByLabelText('Name')).toBe('Test Name')
+```
+
 ### Use clearly defined roles
 
 ## data-testid should be a last resort
@@ -71,3 +107,6 @@ When testing react components the usual tendency is to attach test ids to the el
 ## Add visible loading states
 
 ## Use react-select-event to test react-select elements
+
+## References
+- <https://www.carlrippon.com/accessible-react-forms/>
