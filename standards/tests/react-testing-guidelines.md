@@ -66,36 +66,36 @@ Users tend to identify form elements like input fields by the text associated wi
 
 - ❌ labels that aren't linked
   ```Typescript
-    <label>Name</label>
-    <input type='text' />
+  <label>Name</label>
+  <input type='text' />
   ```
 
 - ✅ linking label with htmlFor
   ```Typescript
-    <label htmlFor='name'>Name</label>
-    <input type='text' id='name' />
-    <label htmlFor='age'>Age</label>
-    <input type='number' id='age' />
+  <label htmlFor='name'>Name</label>
+  <input type='text' id='name' />
+  <label htmlFor='age'>Age</label>
+  <input type='number' id='age' />
   ```
 
 - ✅ linking non labels with aria-labelledby
   ```Typescript
-    <div id='name-label'>
-    <input type='text' aria-labelledby='name-label' />
+  <div id='name-label'>
+  <input type='text' aria-labelledby='name-label' />
   ```
 
 - ✅ nesting element in label tag
   ```Typescript
-    <label>
-      <input type='text' />
-      Name
-    </label>
+  <label>
+    <input type='text' />
+    Name
+  </label>
   ```
 
 We can then get these using the label text queries:
 
 ```Typescript
-  expect(getByLabelText('Name')).toBe('Test Name')
+expect(getByLabelText('Name')).toBe('Test Name')
 ```
 
 ### Use clearly defined roles
