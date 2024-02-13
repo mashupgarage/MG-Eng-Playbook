@@ -134,6 +134,22 @@ When testing react components the usual tendency is to attach test ids to the el
 
 ## Add visible loading states
 
+For components that load data asynchronously, there are times when the test needs to wait for the loading to complete before proceeding with assertions. To know that data is still loading we should add a visual cue of the progress such as text, a progress bar or spinner. For example we have a component like this:
+
+```Typescript
+{isLoading ? (
+  <div data-testid='loading'>Loading...</div>
+): (
+  <div>Content</div>
+)}
+```
+
+When the component is still loading it displays the text `Loading...` (In other implementations it can be a spinner or progress bar). At the moment of writing there isn't a clear standard yet for accessibility of loading indicators so for simplicity we just use a test id for now. We then use the `waitForElementToBeRemoved` function from testing library to wait for the loading to end:
+
+```Typescript
+await waitForElementToBeRemoved(() => screen.getByTestId('loading'))
+```
+
 ## Use react-select-event to test react-select elements
 
 ## References
