@@ -95,10 +95,38 @@ Users tend to identify form elements like input fields by the text associated wi
 We can then get these using the label text queries:
 
 ```Typescript
-expect(getByLabelText('Name')).toBe('Test Name')
+expect(screen.getByLabelText('Name')).toBe('Test Name')
 ```
 
 ### Use clearly defined roles
+
+Aside from labels, a user would tend to identify UI elements by what they do (e.g. a button to click, a menu to navigate, a cell in a table). Assistive technology aims to do the same thing but unlike a person it needs more data to identify what each UI element does. That's where the aria role comes in. Most common html tags such as button have [implicit roles](https://rafaelcamargo.com/blog/using-testing-library-with-implicit-aria-roles/) already but if we use alternative tags (e.g. div tag for button) we need to explicitly add it. Hence, it's also a good practice for accessibility to use the html tags that make the most semantic sense.
+
+- ❌ redundant role
+  ```Typescript
+  <button role='button' onClick={handleClick}>Click here</button>
+  ```
+
+- ❌ not specifying role for alternative tags
+  ```Typescript
+  <div onClick={handleClick}>Click here</div>
+  ```
+
+- ✅ using implicit role
+  ```Typescript
+  <button onClick={handleClick}>Click here</button>
+  ```
+
+- ✅ explicit role
+  ```Typescript
+  <div role='button' onClick={handleClick}>Click here</div>
+  ```
+
+We can then get the button using role queries:
+
+```Typescript
+const button = screen.getByRole('button', { name: /click here/i })
+```
 
 ## data-testid should be a last resort
 
