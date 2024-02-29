@@ -152,5 +152,7 @@ await waitForElementToBeRemoved(() => screen.getByTestId('loading'))
 
 ## Use react-select-event to test react-select elements
 
+In react projects, it's common to use [react-select](https://react-select.com/home) to have an easy way to create a select menu. However, as it is 3rd party code, we don't have control over its structure which can make tests sensitive to failures when the library is updated. To be able to test these better, we recommend to use [react-select-event](https://testing-library.com/docs/ecosystem-react-select-event/).
+
 ## References
 - <https://www.carlrippon.com/accessible-react-forms/>
