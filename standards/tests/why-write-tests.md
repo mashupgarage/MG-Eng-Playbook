@@ -16,6 +16,6 @@ At a minimum we require to write a unit tests for core functions implemented lik
 
 ## Tools for testing
 
-- [React testing library](/standards/tests/react-testing-library.md)
-- [RSpecs for rails](/standards/tests/rspecs.md)
+- [React testing library](/standards/tests/react-testing-guidelines.md)
+- [RSpecs for rails](/standards/tests/ruby-rails-testing-guidelines.md)
 - [Built-in Phoenix testing lirary](/standards/github/phoenix-testing.md)
