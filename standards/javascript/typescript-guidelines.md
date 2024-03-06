@@ -34,7 +34,7 @@ TypeScript type annotations are essential for providing static type checking and
   ❌ const result: any = calculateResult()
   ```
 
-- <b>Use Type Inference When Possible:</b> TypeScript has excellent type inference capabilities. You don't always need to annotate types explicitly.
+- <b>Use Type Inference When Possible:</b> TypeScript has excellent type inference capabilities. You don't always need to annotate types explicitly. Although the usage is more suitable for primitive types (e.g. number, string, boolean).
 
   ```
   ✅ const count = 42
