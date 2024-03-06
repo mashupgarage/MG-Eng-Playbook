@@ -63,7 +63,7 @@ TypeScript type annotations are essential for providing static type checking and
 - <b>Prefer Type Alias over Interfaces:</b> Use Type alias as much as possible because it's more flexible to use than Interface.
 
   ```
-  ✅ Type Age = number
+  ✅ type Age = number
 
   function userDetails(name: Name, age: Age...) {
     // code here
