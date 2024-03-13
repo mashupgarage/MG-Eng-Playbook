@@ -1,3 +1,6 @@
+# Core Concepts
+This is a collection of the core ideas, practices and philosophies that we follow when building software. It is the basis of our standards and practices, and is our answer to the question "What makes good code?". Each section provides an explanation of why we value these concepts and a few bullet points of how to explain or gain appreciation of these.
+
 ## Immutability
 As much as possible we try to minimize data changes to make things less confusing and less error prone. Immutable data is predictable and consistent which makes them easier to debug and helps improve developer experience and code quality.
 - Demonstrate a situation where data is updated simultaneously in multiple places (race condition)
