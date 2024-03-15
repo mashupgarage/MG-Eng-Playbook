@@ -1,5 +1,8 @@
 These are the standards and practices we adopt when working with the tools mentioned:
 
+## General
+- [Core Concepts](/standards/core-concepts.md)
+
 ## Tests
 
 - [Why do we Test?](/standards/tests/why-write-tests.md)
