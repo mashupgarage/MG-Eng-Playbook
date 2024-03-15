@@ -2,7 +2,7 @@
 
 This is a summary or checklist of the standards we follow when writing Javascript code. More detailed explanations about these standards can be found in dedicated pages which are linked.
 
-## Javascript
+## [Javascript](/standards/javascript/javascript-guidelines.md)
 
 ### Variables
 Our choice of variable syntax is based on what is immutable and what is explicit
@@ -29,7 +29,7 @@ Class components tend to have a lot of implicit behavior that can cause confusio
 - We prefer to put state in one place in a parent container (smart component) that passes data to multiple dumb components.
 - We extract non UI logic out of components
 
-### Testing
+### [Testing](/stardards/tests/react-testing-guidelines.md)
 We generally follow the philosophy of [testing library](https://testing-library.com/) where we try to test our components as close as possible to how a user uses them
 - We test components based on visible interactions
 - We avoid testing implementation details (e.g. state, variable names)
