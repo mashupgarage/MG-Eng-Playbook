@@ -1,3 +1,7 @@
+# Javascript Checklist
+
+This is a summary or checklist of the standards we follow when writing Javascript code. More detailed explanations about these standards can be found in dedicated pages which are linked.
+
 ## Javascript
 
 ### Variables
