@@ -23,6 +23,7 @@ These are the standards and practices we adopt when working with the tools menti
 
 - [Javascript Checklist](/standards/javascript/javascript-checklist.md)
 - [Javascript Guidelines](/standards/javascript/javascript-guidelines.md)
+- [Typescript Guidelines](/standards/javascript/typescript-guidelines.md)
 
 ## Project Setup
 
