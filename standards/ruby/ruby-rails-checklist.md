@@ -1,4 +1,5 @@
 # Ruby/Rails Checklist
+This is a summary or checklist of the standards we follow when writing Ruby code. More detailed explanations about these standards can be found in dedicated pages which are linked.
 
 ## Ruby
 
