@@ -1,4 +1,5 @@
 # Elixir
+This is a summary or checklist of the standards we follow when writing Elixir code. More detailed explanations about these standards can be found in dedicated pages which are linked.
 
 ## Pattern Matching
 In MG, we use pattern matching because it's explicit and really a strong point of using elixir. With that said, we prefer the following:
