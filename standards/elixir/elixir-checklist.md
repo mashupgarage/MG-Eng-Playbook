@@ -20,7 +20,7 @@ Account
 |> function_a()
 |> function_b()
 
-  function_a(Account)
+function_a(Account)
 ```
 
 ## Scheduled Jobs
