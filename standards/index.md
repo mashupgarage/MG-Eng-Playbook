@@ -25,6 +25,10 @@ These are the standards and practices we adopt when working with the tools menti
 - [Javascript Guidelines](/standards/javascript/javascript-guidelines.md)
 - [Typescript Guidelines](/standards/javascript/typescript-guidelines.md)
 
+## Ruby
+
+- [Ruby/Rails Checklist](/standards/ruby/ruby-rails-checklist.md)
+
 ## Project Setup
 
 - [Tech Services Checklist](/standards/project-setup/tech-services-checklist.md)
