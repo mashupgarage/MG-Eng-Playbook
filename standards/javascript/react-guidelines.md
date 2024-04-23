@@ -11,6 +11,8 @@ Previously the practice was to use functional components for stateless component
 
 ## Keep reusable components stateless
 
+Components with state tend to be coupled to specific behaviors and become less flexible to reuse. When creating new components we should start stateless and only add state when needed (More info on state in the next point).
+
 ## Keep shared state in a container
 
 ## Extract non UI logic out of components
