@@ -16,3 +16,29 @@ Components with state tend to be coupled to specific behaviors and become less f
 ## Keep shared state in a container
 
 ## Extract non UI logic out of components
+
+Code in react components should primarily be concerned with rendering JSX, updating state or anything that impacts the UI. Anything that does otherwise is better off in dedicated files. This also improves testing as we can focus on only those behaviors without being tied to UI changes. Some examples include:
+- Validations
+  ```
+  export const validateEmail = email => {
+    const errors = []
+
+    if (!email) {
+      errors.push('Email Required')
+    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email)) {
+      errors.push('Invalid Email Address')
+    }
+
+    return errors
+  }
+  ```
+- Helpers
+  ```
+  export const fileNameFromUrl = (url: string) => {
+    return url
+      .split('/')
+      .reverse()[0]
+      .split('?')[0]
+  }
+
+  ```
