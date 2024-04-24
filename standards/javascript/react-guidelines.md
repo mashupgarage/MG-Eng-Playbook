@@ -19,7 +19,7 @@ Components with state tend to be coupled to specific behaviors and become less f
 
 Code in react components should primarily be concerned with rendering JSX, updating state or anything that impacts the UI. Anything that does otherwise is better off in dedicated files. This also improves testing as we can focus on only those behaviors without being tied to UI changes. Some examples include:
 - Validations
-  ```javascript
+  ```typescript
   export const validateEmail = email => {
     const errors = []
 
@@ -33,7 +33,7 @@ Code in react components should primarily be concerned with rendering JSX, updat
   }
   ```
 - Helpers
-  ```javascript
+  ```typescript
   export const fileNameFromUrl = (url: string) => {
     return url
       .split('/')
