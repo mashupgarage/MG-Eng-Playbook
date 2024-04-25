@@ -69,8 +69,75 @@ On first look it looks alright and will probably work well enough for the given 
   ```
 This way we keep the modal flexible to adjust to any feature specific behavior (More details in the next section).
 
+## Keep shared state and handlers in a container
 
-## Keep shared state in a container
+We recommend react features to be composed of a single stateful parent component (we call this a container) and one or more stateless child components. This prevents state from being scattered all over the place and makes it easier to find the source of data. Moreover, when components need to interact with each other we will need to move their state to one place anyway so might as well design features in that way from the start. File structure wise we recommend something like this:
+```
+src/
+  containers/
+    SignUpContainer.tsx
+  components/
+    Modal.tsx
+    UserInfoForm.tsx
+    BusinessInfoForm.tsx
+```
+
+All state and handlers for this feature should live only in `SignUpContainer`, something like this:
+```typescript
+const SignUpContainer = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [firstName, setFirstName] = useState('')
+  const [lastName, setFirstName] = useState('')
+  const [companyName, setCompanyName] = useState('')
+  const [region, setRegion] = useState('')
+
+  const handleOpen = () => {
+    setIsModalOpen(true)
+  }
+
+  const handleClose = () => {
+    setIsModalOpen(false)
+  }
+
+  const handleFirstNameChange = (event: FormEvent<HTMLInputElement>) => {
+    setFirstName(event.currentTarget.value)
+  }
+
+  const handleLastNameChange = (event: FormEvent<HTMLInputElement>) => {
+    setLastName(event.currentTarget.value)
+  }
+
+  const handleCompanyNameChange = (event: FormEvent<HTMLInputElement>) => {
+    setCompanyName(event.currentTarget.value)
+  }
+
+  const handleRegionChange = (event: FormEvent<HTMLInputElement>) => {
+    setRegion(event.currentTarget.value)
+  }
+
+  return(
+    <div>
+      <button>Sign Up</button>
+      <Modal isOpen={isModalOpen} onClose={handleClose}>
+        <UserInfoForm
+          firstName={firstName}
+          lastName={lastName}
+          handleFirstNameChange={handleFirstNameChange}
+          handleLastNameChange={handleLastNameChange}
+        />
+        <BusinessInfoForm
+          companyName={companyName}
+          region={region}
+          handleCompanyNameChange={handleCompanyNameChange}
+          handleRegionChange={handleRegionChange}
+        />
+      </Modal>
+    </div>
+  )
+}
+```
+
+This way, if ever we would need another kind of sign up (e.g.separate admin sign up) we can just create a new container with its own state and handlers then reuse the modal or relevant forms.
 
 ## Extract non UI logic out of components
 
