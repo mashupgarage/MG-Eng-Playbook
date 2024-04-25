@@ -158,3 +158,22 @@ Code in react components should primarily be concerned with rendering JSX, updat
   }
 
   ```
+- Api handlers
+  ```
+  export const fetchComments = async (
+    apiToken: string,
+    page: number
+  ): Promise<CommentListAPIResponse> => {
+    const endpoint = `/api/comments?page=${page}`
+    const headers = {
+      Authorization: apiToken,
+      Accept: 'application/json',
+      'Content-Type': 'application/json'
+    }
+
+    return fetch(endpoint, {
+      headers,
+      method: 'GET'
+    }).then((res: Response) => res.json())
+  }
+  ```
