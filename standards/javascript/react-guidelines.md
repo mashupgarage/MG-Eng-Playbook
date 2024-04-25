@@ -159,7 +159,7 @@ Code in react components should primarily be concerned with rendering JSX, updat
 
   ```
 - Api handlers
-  ```
+  ```typescript
   export const fetchComments = async (
     apiToken: string,
     page: number
