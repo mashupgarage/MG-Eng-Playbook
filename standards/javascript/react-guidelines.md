@@ -11,7 +11,64 @@ Previously the practice was to use functional components for stateless component
 
 ## Keep reusable components stateless
 
-Components with state tend to be coupled to specific behaviors and become less flexible to reuse. When creating new components we should start stateless and only add state when needed (More info on state in the next point).
+Components with state tend to be coupled to specific behaviors and become less flexible to reuse. When creating new components we should start stateless and only add state when needed. For example say we have a modal component that looks like this:
+  ```typescript
+  const Modal = () => {
+    const [isOpen, setIsOpen] = useState(false)
+
+    const onClose = () => {
+      setIsOpen(!isOpen)
+    }
+
+    if (isOpen) {
+      return ReactDOM.createPortal(
+        <div
+          className={wrapperClass}
+          aria-label='modal'
+          data-testid={dataTestId}
+        >
+          <div className='body' aria-modal role='dialog' tabIndex={-1}>
+            {children}
+          </div>
+          <div className='background' onClick={() => onClose()} />
+        </div>,
+        document.body
+      )
+    }
+
+    return null
+  }
+  ```
+
+On first look it looks alright and will probably work well enough for the given use case. However what if we want custom logic like an alternative button to close or a confirmation dialog or auto close it after an API action? What if closing the modal should trigger an update in another component but only for specific use cases? You may get tempted to add more logic to the modal to handle those behaviors but after a while that may get tricky. To simplify things we recommend to keep state outside and instead just pass as props:
+  ```typescript
+  type ModalProps = {
+    isOpen: boolean
+    onClose: () => void
+  }
+
+  const Modal = ({ isOpen, onClose }: ModalProps) => {
+    if (isOpen) {
+      return ReactDOM.createPortal(
+        <div
+          className={wrapperClass}
+          aria-label='modal'
+          data-testid={dataTestId}
+        >
+          <div className='body' aria-modal role='dialog' tabIndex={-1}>
+            {children}
+          </div>
+          <div className='background' onClick={() => onClose()} />
+        </div>,
+        document.body
+      )
+    }
+
+    return null
+  }
+  ```
+This way we keep the modal flexible to adjust to any feature specific behavior (More details in the next section).
+
 
 ## Keep shared state in a container
 
