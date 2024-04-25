@@ -69,7 +69,7 @@ On first look it looks alright and will probably work well enough for the given 
   ```
 This way we keep the modal flexible to adjust to any feature specific behavior (More details in the next section).
 
-## Keep shared state and handlers in a container
+## Keep shared state and handlers in containers
 
 We recommend react features to be composed of a single stateful parent component (we call this a container) and one or more stateless child components. This prevents state from being scattered all over the place and makes it easier to find the source of data. Moreover, when components need to interact with each other we will need to move their state to one place anyway so might as well design features in that way from the start. File structure wise we recommend something like this:
 ```
