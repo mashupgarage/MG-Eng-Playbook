@@ -1,4 +1,4 @@
-# Elixir Guidelines
+# Elixir writing standards
 Here are out best practices when it comes to Elixir.
 
 ## Prefer pattern matching over if-else conditionals
