@@ -33,3 +33,31 @@ But no matter what the padding won't change. We could try a number of things but
 ```
 
 If you're the only developer who touched the code maybe it can be fine but what if you forgot about it or another dev edits it in the future? It's usually tempting to just add another `!important` to force things to work like magic but as stylesheets grow that can cause additional complexity which may lead to bugs and other confusion. Save yourself the hassle, don't use it. We should flag any use of `!important` in our projects using linters.
+
+# Prefer to select using class names
+
+Classes are our preferred way to select elements. We generally avoid using tag selectors because they are too general and have high risk of hitting unintended items. On the other hand, we also rarely use id selectors because id's should ideally be unique and that discourages reuse.
+
+- ✅ class
+  ```css
+  .label {
+    color: red;
+  }
+  ```
+- ⚠️  tag
+  ```css
+  div {
+    color: red;
+  }
+
+  div.label {
+    color: red;
+  }
+  ```
+- ⚠️  id
+  ```css
+  #main {
+    color: red;
+  }
+  ```
+
