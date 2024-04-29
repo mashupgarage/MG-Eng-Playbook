@@ -127,7 +127,7 @@ This combinator is too general and may unexpectedly target something unintended.
 
 ## Use RSCSS
 
-At MG we follow the concepts of RSCSS to write maintainable CSS. The core concept of RSCSS is to group CSS rules into components, elements and variants. We can visualize RSCSS with the following:
+At MG we follow the concepts of [RSCSS](https://ricostacruz.com/rscss/index.html) to write maintainable CSS. The core concept of RSCSS is to group CSS rules into components, elements and variants. We can visualize RSCSS with the following:
 ```
 Components
   > Elements
