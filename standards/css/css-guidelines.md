@@ -64,6 +64,15 @@ Classes are our preferred way to select elements. We generally avoid using tag s
 ## Use descriptive class names
 
 Classes should have a semantic meaning that directly relates to what the element does. This makes css rules easier to understand and trace.
+
+- ✅ descriptive names
+  ```html
+    <div class='post'>
+      <div class='title'>Sample Post</div>
+      <div class='body'>This is a post</div>
+    </div>
+  ```
+
 - ❌ names that don't mean anything
   ```html
     <div class='wat'>Test</div>
@@ -75,10 +84,43 @@ Classes should have a semantic meaning that directly relates to what the element
     <input type='checkbox' class='radio' />
     <button class='textarea'>Submit</button>
   ```
-- ✅ descriptive names
-  ```html
-    <div class='post'>
-      <div class='title'>Sample Post</div>
-      <div class='body'>This is a post</div>
-    </div>
+## Avoid the descendant combinator
+
+This combinator is too general and may unexpectedly target something unintended. To make things simpler to follow, prefer to use combinators which have more specific bounds such as child (>), next-sibling (+), or adjacent-sibling (~).
+- ✅ child
+  ```css
+  .post > .title {
+    font-weight: bold;
+  }
+
+  .post {
+    > .body {
+      padding: 8px;
+    }
+  }
+  ```
+- ✅ next-sibling
+  ```css
+  .post + .post {
+    margin-top: 16px;
+  }
+  ```
+- ✅ adjacent-sibling
+  ```css
+  .trigger:checked ~ .post {
+    display: block;
+    visibility: visible;
+  }
+  ```
+- ⚠️  descendant
+  ```css
+  .post .title {
+    font-weight: bold;
+  }
+
+  .post {
+    .body {
+      padding: 8px;
+    }
+  }
   ```
