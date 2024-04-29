@@ -124,3 +124,56 @@ This combinator is too general and may unexpectedly target something unintended.
     }
   }
   ```
+
+## Use RSCSS
+
+At MG we follow the concepts of RSCSS to write maintainable CSS. The core concept of RSCSS is to group CSS rules into components, elements and variants. We can visualize RSCSS with the following:
+```
+Components
+  > Elements
+  & Variants
+```
+
+Components are groupings of CSS rules that represent objects or use cases. They can stand alone and should have specific behavior. They are also usually named with two words (e.g. .pricing-card, .comment-panel, .custom-table).
+
+Elements are the parts that make up components. These usually have more vague or general behavior and only gain context when used under a component along with other elements. They are usually named with one word (e.g. .title, .form, .cell).
+
+Variants are modifiers used on components or elements to change behavior for specific scenarios. They are usually prefixed with a dash (e.g. .-small, .-medium, .-large).
+
+Here's an example of a component built in RSCSS:
+```html
+  <div class='post-panel -danger'>
+    <div class='title -emphasized'>Sample Post</div>
+    <div class='body'>This is a post</div>
+  </div>
+```
+
+```css
+.post-panel {
+  padding: 8px;
+  background-color: white;
+  border: 1px solid black;
+
+  &.-danger {
+    background-color: $red-50;
+    border: 1px solid $red-100;
+  }
+
+  > .title {
+    font-weight: 400;
+    color: black;
+  }
+
+  > .title.-emphasized {
+    font-weight: bold;
+  }
+
+  &.-danger > .title {
+    color: $red-100;
+  }
+
+  > .title + .body {
+   margin-top: 16px;
+  }
+}
+```
