@@ -4,7 +4,7 @@ Here are out best practices when it comes to Elixir.
 ## Prefer pattern matching over if-else conditionals
 
 We are heavily inclined on using elixir's pattern matching across our project. This promotes a better readability and organization in the long run. An implementation best suited for a functional oriented app.
-```
+```elixir
 # Avoid
 def hash_password(%{
   changes: { password: password },
