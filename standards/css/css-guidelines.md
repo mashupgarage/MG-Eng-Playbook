@@ -88,7 +88,7 @@ Classes should have a semantic meaning that directly relates to what the element
 
 This combinator is too general and may unexpectedly target something unintended. To make things simpler to follow, prefer to use combinators which have more specific bounds such as child (>), next-sibling (+), or adjacent-sibling (~).
 - ✅ child
-  ```css
+  ```scss
   .post > .title {
     font-weight: bold;
   }
@@ -113,7 +113,7 @@ This combinator is too general and may unexpectedly target something unintended.
   }
   ```
 - ⚠️  descendant
-  ```css
+  ```scss
   .post .title {
     font-weight: bold;
   }
@@ -148,7 +148,7 @@ Here's an example of a component built in RSCSS:
   </div>
 ```
 
-```css
+```scss
 .post-panel {
   padding: 8px;
   background-color: white;
