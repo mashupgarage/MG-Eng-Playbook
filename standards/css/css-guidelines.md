@@ -12,21 +12,21 @@ The `!important` keyword overrides precedence and makes a rule priority over eve
 ```
 
 Let's say each label has a padding of 8px. Maybe at the time of development this was a requirement so we put an `!important`:
-```css
+```scss
 .label {
   padding: 8px !important;
 }
 ```
 
 Let's say the requirements change in the future and we want a variant with no padding:
-```css
+```scss
 .label.-no-padding {
   padding: 0px;
 }
 ```
 
 But no matter what the padding won't change. We could try a number of things but the end of the day we could only resort to another `!important`
-```css
+```scss
 .label.-no-padding {
   padding: 0px !important;
 }
@@ -39,13 +39,13 @@ If you're the only developer who touched the code maybe it can be fine but what 
 Classes are our preferred way to select elements. We generally avoid using tag selectors because they are too general and have high risk of hitting unintended items. On the other hand, we also rarely use id selectors because id's should ideally be unique and that discourages reuse.
 
 - ✅ class
-  ```css
+  ```scss
   .label {
     color: red;
   }
   ```
 - ⚠️  tag
-  ```css
+  ```scss
   div {
     color: red;
   }
@@ -55,7 +55,7 @@ Classes are our preferred way to select elements. We generally avoid using tag s
   }
   ```
 - ⚠️  id
-  ```css
+  ```scss
   #main {
     color: red;
   }
@@ -100,13 +100,13 @@ This combinator is too general and may unexpectedly target something unintended.
   }
   ```
 - ✅ next-sibling
-  ```css
+  ```scss
   .post + .post {
     margin-top: 16px;
   }
   ```
 - ✅ adjacent-sibling
-  ```css
+  ```scss
   .trigger:checked ~ .post {
     display: block;
     visibility: visible;
