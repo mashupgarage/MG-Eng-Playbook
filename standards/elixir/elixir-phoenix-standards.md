@@ -18,7 +18,7 @@ def hash_password(%{
 end
 ```
 
-```
+```elixir
 # Good
 def hash_password(%{
   changes: { password: password },
@@ -44,20 +44,20 @@ Avoid using Agents. Use GenServer instead, since Agent is simply a thin wrapper 
 ## Pipe operator
 Prefer to only pipe functions when chaining 2 functions or more.
 
-```
+```elixir
 # Avoid: this can easily be written without piping
 some_value
 |> some_function()
 ```
 
-```
+```elixir
 # Good
 some_value
 |> some_function()
 |> some_other_function()
 ```
 
-```
+```elixir
 # Also good
 some_function(some_value)
 ```
@@ -72,7 +72,8 @@ mix format --check-formatted
 
 ## Concurrent Programming
 Leverage Elixir's lightweight processes (actors) and OTP (Open Telecom Platform) for building concurrent and fault-tolerant applications.
-```
+
+```elixir
 defmodule ConcurrentExample do
   # Define a worker process
   defmodule Worker do
@@ -128,7 +129,7 @@ IO.inspect(ConcurrentExample.calculate_squares(numbers))
 ## Error Handling
 Use Elixir's `with` and `try` constructs for error handling, and avoid throwing exceptions for expected errors.
 
-```
+```elixir
 # Example using 'with' for error handling
 def divide_with_with(a, b) do
   with {:ok, result} <- divide(a, b) do
@@ -140,7 +141,7 @@ def divide_with_with(a, b) do
   end
 end
 ```
-```
+```elixir
 # Example using 'try' for error handling
 def divide_with_try(a, b) do
   try do
