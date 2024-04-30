@@ -45,7 +45,7 @@ Avoid using Agents. Use GenServer instead, since Agent is simply a thin wrapper 
 Prefer to only pipe functions when chaining 2 functions or more.
 
 ```
-# Avoid: this can easily be written without pipnig
+# Avoid: this can easily be written without piping
 some_value
 |> some_function()
 ```
