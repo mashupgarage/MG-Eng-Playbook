@@ -29,6 +29,10 @@ These are the standards and practices we adopt when working with the tools menti
 
 - [Ruby/Rails Checklist](/standards/ruby/ruby-rails-checklist.md)
 
+## CSS
+
+- [CSS Guidelines](/standards/css/css-guidelines.md)
+
 ## Project Setup
 
 - [Tech Services Checklist](/standards/project-setup/tech-services-checklist.md)
