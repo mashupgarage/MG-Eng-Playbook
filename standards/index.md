@@ -30,6 +30,10 @@ These are the standards and practices we adopt when working with the tools menti
 
 - [Ruby/Rails Checklist](/standards/ruby/ruby-rails-checklist.md)
 
+## Elixir
+
+- [Elixir/Phoenix Guidelines](/standards/elixir/elixir-phoenix-standards.md)
+
 ## CSS
 
 - [CSS Guidelines](/standards/css/css-guidelines.md)
