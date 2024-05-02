@@ -24,6 +24,7 @@ These are the standards and practices we adopt when working with the tools menti
 - [Javascript Checklist](/standards/javascript/javascript-checklist.md)
 - [Javascript Guidelines](/standards/javascript/javascript-guidelines.md)
 - [Typescript Guidelines](/standards/javascript/typescript-guidelines.md)
+- [React Guidelines](/standards/javascript/react-guidelines.md)
 
 ## Ruby
 
@@ -32,6 +33,10 @@ These are the standards and practices we adopt when working with the tools menti
 ## Elixir
 
 - [Elixir/Phoenix Guidelines](/standards/elixir/elixir-phoenix-standards.md)
+
+## CSS
+
+- [CSS Guidelines](/standards/css/css-guidelines.md)
 
 ## Project Setup
 

@@ -22,7 +22,7 @@ Promises should be written such that they are easy to understand, trace, and deb
 
 ## React
 
-### Components
+### [Components](/standards/javascript/react-guidelines.md)
 Class components tend to have a lot of implicit behavior that can cause confusion in the dev process hence we avoid it. We also adopt component based thinking to divide applications into clear parts.
 - We prefer functional components over class components
 - We prefer to keep reusable components stateless (dumb components)
