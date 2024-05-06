@@ -1,5 +1,17 @@
 # Javascript Competencies
 
+## Document Object Model
+
+### Description
+
+Able to navigate and manipulate the Document Object Model (DOM) tree effectively
+
+### Examples
+
+- Understands the different selectors and when to use them.
+- Knows how to add or remove elements in any part of the DOM tree.
+- Able to edit content of elements in the DOM tree.
+
 ## Event Handling
 
 ### Description
