@@ -38,6 +38,10 @@ These are the standards and practices we adopt when working with the tools menti
 
 - [CSS Guidelines](/standards/css/css-guidelines.md)
 
+## Elixir
+
+- [Elixir Checklist](/standards/elixir/elixir-checklist.md)
+
 ## Project Setup
 
 - [Tech Services Checklist](/standards/project-setup/tech-services-checklist.md)
