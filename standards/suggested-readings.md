@@ -25,3 +25,7 @@ When starting out, we encourage devs to have a read through these materials. You
 ## CSS
 
 - [RSCSS](https://ricostacruz.com/rscss/)
+
+## Other
+
+- [MG Sessions: What makes a great team member?](https://docs.google.com/presentation/d/1XQgV1kdw-GSxUJbc0Ks9Vs34yq1e6f8kJP69032gcQI/edit?usp=sharing)
