@@ -1,5 +1,17 @@
 # Javascript Competencies
 
+## Syntax Familiarity
+
+### Description
+
+Able to adapt to different versions of Javascript syntax
+
+### Examples
+
+- Is familiar with at least ES6.
+- Is cautious about browser compatibility of code used.
+- Understands compatibility techniques such as transpiling and polyfills.
+
 ## Document Object Model
 
 ### Description
