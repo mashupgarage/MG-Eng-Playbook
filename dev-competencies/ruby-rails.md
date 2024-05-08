@@ -7,7 +7,7 @@
 Have the understanding of how classes and objects works
 ### Example
 - Able to read, understand and write ruby classes and objects.
-- Able to write and understand class's and object's usecase, capabilities and methods.
+- Able to write and understand class's and object's use case, capabilities and methods.
 - Able to apply the principles of SOLID when writing classes.
 - Able to understand the concept of mutability and immutability.
 - Able to write/refactor classes and objects as DRY as possible.
@@ -27,15 +27,15 @@ Know how of Ruby's class naming organization
 
 ## Single responsibility class/instance methods
 ### Description
-Understanding of writing class according to its namesake usecase
+Understanding of writing class according to its namesake use case
 ### Example
-- Able to write short and concise methods that only does what its named for.
+- Able to write short and concise methods that only does what it's named for.
 
 ## Private/Public class methods
 ### Description
 Understanding of Ruby's private and public class methods
 ### Example
-- Able to properly discern proper usecase for public and private methods.
+- Able to properly discern proper use case for public and private methods.
 
 ## Enumerables and methods
 ### Description
@@ -56,7 +56,7 @@ Understanding of Ruby's regular expression
 Management and understanding of Ruby's exceptions
 ### Example
 - Able to understand exception messages and how to handle appropriately.
-- Able when to rescue exceptions and when to make it fail loudly.
+- Able to discern when to rescue exceptions and when to make it fail loudly.
 - Able to catch execeptions and manage response to that exception based on the type of exception.
 
 # Rails
