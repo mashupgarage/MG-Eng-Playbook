@@ -29,6 +29,7 @@ These are the standards and practices we adopt when working with the tools menti
 ## Ruby
 
 - [Ruby/Rails Checklist](/standards/ruby/ruby-rails-checklist.md)
+- [Ruby/Rails Guidelines](/standards/ruby/ruby-rails-standards.md)
 
 ## Elixir
 
