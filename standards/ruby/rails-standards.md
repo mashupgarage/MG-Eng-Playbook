@@ -81,9 +81,6 @@ On some instances, our models also contains business logic as well.
 We group contents of models by:
 ```ruby
 class Car < ApplicationRecord
-  # default scopes
-  default_scope { where(active: true) }
-
   # named scopes
   scope :inactive, -> { where(is_active: false) }
 
@@ -113,6 +110,11 @@ class Car < ApplicationRecord
   # gem related macros
 end
 ```
+
+### Models: Scopes
+We don't use use default_scope as this introduces near untraceable queries running defaulty for each instance of the model.
+We prefer to use named scopes and call as per useage instead of a default scope running rampantly as there are cases
+we don't need the default and having to reverse that default is mightly the same as just introducing a named scope.
 
 ### Model: Enums
 Using enums is not the norms for us here. But in case its needed, we use hash types for it
@@ -234,7 +236,7 @@ Car.where("active = :active AND brand = :brand_name", active: active, brand_name
 
 ### Model: Sorting chronologically
 We seldom use `id` as a basis for sorting chronologically, but instead we use `create_at` fields.
-We also don't use sorting as part of a default scope as that slows down general usecase for queries.
+We also don't use sorting as part of a default scope as that slows down general use case for queries.
 ```ruby
 # bad
 class Car
