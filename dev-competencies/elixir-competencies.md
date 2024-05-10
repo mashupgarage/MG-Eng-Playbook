@@ -20,9 +20,20 @@ Developers should be comfortable with Elixir syntax, data types (atoms, tuples, 
 
 ## Examples
 
-- Able to define public and private methods (def/defp).
+- Able to define public and private methods
+  ```elixir
+  def sameple, do: true
+  defp private, do: true
+  ```
 - Able to use pattern match effectively.
-- Knows built in function and its usage such Enum and String function.
+  ```elixir
+  def fetch_name(%{name: nil}), do: "no name found"
+  def fetch_name(%{name: person_name}), do: person_name
+  # catch any matching case
+  def fetch_name(_data), do: "invalid data"
+
+  ```
+- Knows built in function and its usage such as Enum and String function.
 
 ## Concurrent Programming
 
@@ -32,6 +43,47 @@ Elixir leverages the Erlang Virtual Machine (BEAM), which excels at concurrency 
 ### Examples
 
 - Be able to setup a concurrent module that utilizes the built-in functions like spawn, send and receive.
+```elixir
+defmodule ConcurrentExample do
+  def start do
+    # Start two processes
+    pid1 = spawn_link(__MODULE__, :process_one, [])
+    pid2 = spawn_link(__MODULE__, :process_two, [])
+
+    # Send messages to the processes
+    send(pid1, {:hello, self()})
+    send(pid2, {:world, self()})
+
+    # Wait for responses
+    receive do
+      msg ->
+        IO.puts("Received message from Process 1: #{inspect(msg)}")
+    end
+
+    receive do
+      msg ->
+        IO.puts("Received message from Process 2: #{inspect(msg)}")
+    end
+  end
+
+  def process_one do
+    receive do
+      {:hello, sender} ->
+        send(sender, "Hello from Process 1")
+    end
+  end
+
+  def process_two do
+    receive do
+      {:world, sender} ->
+        send(sender, "World from Process 2")
+    end
+  end
+end
+
+ConcurrentExample.start()
+
+```
 
 ## Elixir tooling
 
@@ -52,6 +104,14 @@ Ecto is the database library for Elixir, providing a powerful query interface an
 ### Examples
 
 - Be able to interpret queries using Ecto.
+```elixir
+# sample sql
+Select * from users where age > 18;
+
+# Ecto
+Repo.all(from u in "users",
+          where: u.age > 18)
+```
 - Can define schemas.
 - Manage database migrations.
 
@@ -73,3 +133,10 @@ Developers should be adept at writing unit tests, integration tests, and end-to-
 ### Examples
 
 - Able to write unit tests
+```elixir
+test "get_all_users retrieves all users" do
+  users = User.get_all_users()
+  assert length(users) == 2
+  # Add more assertions based on your test data
+end
+```
