@@ -21,3 +21,19 @@ We tend to use javascript more for frontend work and so we need a jest environme
 ```bash
 yarn add jest-environment-jsdom
 ```
+
+## Configuration
+
+To store configuration, create a `jest.config.js` file in the root of the project. We recommend to set at least these configurations and you can add more depending on project needs.
+
+```javascript
+module.exports = {
+  // file extensions used in codebase. Since most projects use typescript it's recommended to declare those first.
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'json', 'jsx', 'node'],
+  // use a typescript ready preset for easier integration
+  preset: "ts-jest",
+  // important for frontend focused code (e.g. react) to have access to most browser behaviors
+  testEnvironment: "jsdom",
+}
+
+```
