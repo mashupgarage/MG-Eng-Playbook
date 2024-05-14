@@ -33,11 +33,11 @@ module.exports = {
   // File extensions used in codebase. Since most projects use typescript it's recommended to declare those first.
   moduleFileExtensions: ['ts', 'tsx', 'js', 'json', 'jsx', 'node'],
   // Use a typescript ready preset for easier integration
-  preset: "ts-jest",
+  preset: 'ts-jest',
   // Recommended especially for projects that are not pure JS. Replace accordingly.
   roots: ['<rootDir>/app/javascript'],
   // Important for frontend JS code to have access to most browser behaviors when testing. If pure backend JS code (e.g. API), use node instead
-  testEnvironment: "jsdom"
+  testEnvironment: 'jsdom'
 }
 
 ```
