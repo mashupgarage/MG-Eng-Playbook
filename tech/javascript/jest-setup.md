@@ -62,3 +62,8 @@ javascript/
         formatDate.test.ts
       formatDate.ts
 ```
+
+## Other Considerations
+
+- If the project is using nextjs most of the installation is automatic so most likely it's only the config we need to touch.
+- If the project is using a bundler (e.g. webpack, esbuild), there might be some additional config to tweak.
