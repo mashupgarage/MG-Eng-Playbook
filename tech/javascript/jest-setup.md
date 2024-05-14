@@ -41,3 +41,24 @@ module.exports = {
 }
 
 ```
+
+## File Structure
+
+We recommend putting test files in separate `__tests__/` folders to keep them together while lessening clutter on the folder of the actual code. For example
+
+```
+javascript/
+  components/
+    __tests__/
+      LoginForm.test.tsx
+    LoginForm.tsx
+  containers/
+    __tests__/
+      LoginContainer.test.tsx
+    LoginContainer.tsx
+  utils/
+    date/
+      __tests__/
+        formatDate.test.ts
+      formatDate.ts
+```
