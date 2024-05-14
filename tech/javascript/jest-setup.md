@@ -28,12 +28,16 @@ To store configuration, create a `jest.config.js` file in the root of the projec
 
 ```javascript
 module.exports = {
-  // file extensions used in codebase. Since most projects use typescript it's recommended to declare those first.
+  // Add local code as source to look for when importing
+  moduleDirectories: ['node_modules', 'app/javascript'],
+  // File extensions used in codebase. Since most projects use typescript it's recommended to declare those first.
   moduleFileExtensions: ['ts', 'tsx', 'js', 'json', 'jsx', 'node'],
-  // use a typescript ready preset for easier integration
+  // Use a typescript ready preset for easier integration
   preset: "ts-jest",
-  // important for frontend focused code (e.g. react) to have access to most browser behaviors
-  testEnvironment: "jsdom",
+  // Recommended especially for projects that are not pure JS. Replace accordingly.
+  roots: ['<rootDir>/app/javascript'],
+  // Important for frontend JS code to have access to most browser behaviors when testing. If pure backend JS code (e.g. API), use node instead
+  testEnvironment: "jsdom"
 }
 
 ```
