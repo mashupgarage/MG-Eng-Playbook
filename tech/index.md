@@ -9,3 +9,4 @@
 ## Ruby on Rails
 
 - [Setting up a RSpec on a Ruby on Rails project](/tech/ruby-on-rails/rspec-setup.md)
+- [Rails docker setup](/tech/ruby-on-rails/rails-docker-setup.md)
