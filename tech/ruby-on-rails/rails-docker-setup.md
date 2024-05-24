@@ -55,8 +55,8 @@ services:
     ports:
       - '5432'
     environment:
-      POSTGRES_PASSWORD: postgres
-      PGPASSWORD: postgres
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - PGPASSWORD=${PGPASSWORD}
 
 volumes:
   rubygems:
@@ -66,7 +66,7 @@ volumes:
 
 The `web` service is our main service that we'll use to start our rails application. We specify `build: .` to make it use the image we built with the `Dockerfile` in the same directory. When the project is up this service will run a rails server on port 3000. To persist some of our dependencies on the host machine we can also create some volumes for our gems (bundle) and node modules so they don't need to install every time. Lastly we add a dependency to the db service which we will discuss next.
 
-The `db` service uses a prebuilt postgres image and persists its data using a volume. We usually use port 5432 but this can be anything depending on port availability. We then specify the postgres password for authentication when accessing the db. Also take note for the application to use the db service we also need to set it as the host in `config/database.yml`:
+The `db` service uses a prebuilt postgres image and persists its data using a volume. We usually use port 5432 but this can be anything depending on port availability. We then use a `.env` file in root directory to specify the passwords for authentication when accessing the db and other data we may need. Also take note for the application to use the db service we may also need to set it as the host in `config/database.yml`:
 
 ```yaml
 default: &default
