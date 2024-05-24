@@ -53,7 +53,7 @@ services:
     volumes:
       - 'pgdata:/var/lib/postgresql/data'
     ports:
-      - '5432'
+      - '5432:5432'
     environment:
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
       - PGPASSWORD=${PGPASSWORD}
