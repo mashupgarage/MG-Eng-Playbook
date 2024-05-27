@@ -47,6 +47,12 @@ services:
       - '3000:3000'
     depends_on:
       - db
+    environment:
+      - RAILS_ENV=${RAILS_ENV}
+      - DATABASE_URL=${DATABASE_URL}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - PGPASSWORD=${PGPASSWORD}
 
   db:
     image: postgres:15
@@ -64,9 +70,9 @@ volumes:
   node_modules:
 ```
 
-The `web` service is our main service that we'll use to start our rails application. We specify `build: .` to make it use the image we built with the `Dockerfile` in the same directory. When the project is up this service will run a rails server on port 3000. To persist some of our dependencies on the host machine we can also create some volumes for our gems (bundle) and node modules so they don't need to install every time. Lastly we add a dependency to the db service which we will discuss next.
+The `web` service is our main service that we'll use to start our rails application. We specify `build: .` to make it use the image we built with the `Dockerfile` in the same directory. When the project is up this service will run a rails server on port 3000. To persist some of our dependencies on the host machine we can also create some volumes for our gems (bundle) and node modules so they don't need to install every time. We also set `depends_on` to `db` since we want to be sure our db service is running. Lastly, we set environment variables for our application based on values in a `.env` file, which will be useful for db config later.
 
-The `db` service uses a prebuilt postgres image and persists its data using a volume. We usually use port 5432 but this can be anything depending on port availability. We then use a `.env` file in root directory to specify the passwords for authentication when accessing the db and other data we may need. Also take note for the application to use the db service we may also need to set it as the host in `config/database.yml`:
+The `db` service uses a prebuilt postgres image and persists its data using a volume. We usually use port 5432 but this can be anything depending on port availability. We then use a `.env` file in root directory to specify the passwords for authentication when accessing the db and other data we may need. Also take note for the application to use the db service we may also need to setup our `database.yml` to use the environment variables we set.
 
 ```yaml
 default: &default
@@ -75,9 +81,19 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  host: db
-  username: postgres
-  password: postgres
+  url: <%= ENV['DATABASE_URL'] %>
+  username: <%= ENV['POSTGRES_USER'] %>
+  password: <$= ENV['POSTGRES_PASSWORD'] %>
+```
+
+An example `.env` for development can look like this:
+
+```
+RAILS_ENV=development
+DATABASE_URL=postgres://postgres:postgres@db/rails_aws_demo_development
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=postgres
+PGPASSWORD=postgres
 ```
 
 These two services are usually enough to get a project up and running then other services can be added as needed. For example if we run `webpack` for js bundling we can also create a service for that. If the project needs background jobs we can also set up services for `redis` and `sidekiq`.
