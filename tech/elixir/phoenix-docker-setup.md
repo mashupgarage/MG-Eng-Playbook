@@ -62,6 +62,8 @@ services:
     command: 'mix phx.server'
     environment:
       - DATABASE_URL=${DATABASE_URL}
+      - POSTGRES_USERNAME=${POSTGRES_USERNAME}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
 
   db:
     image: postgres:15
@@ -81,4 +83,23 @@ volumes:
 
 The `web` service is our main service that we'll use to start our phoenix application. We specify `build .` to make it use the image we built in the `Dockerfile` in the same directory. To persist some of our dependencies on the host machine we use volumes for `node_modules` (Node.js modules), `assets_node_modules` (Node.js modules for phoenix projects), and `build` (elixir build files) so we don't need to install every time. We specify port 4000 so that when the service runs the specified command it will use that port. This can be changed to any port applicable and available. Lastly for any environment variables needed we store them in a `.env` file in the root of the project.
 
-The `db` service uses a prebuilt postgres image and persists its data using a volume. We usually use port 5432 but this can be anything depending on port availability. We also use a `.env` file to store needed information like the password.
+The `db` service uses a prebuilt postgres image and persists its data using a volume. We usually use port 5432 but this can be anything depending on port availability. We also use a `.env` file to store needed information like the password. To properly use the database in the db service, you may also need to update your database config. For example for dev config in `dev.exs`:
+
+```elixir
+config :hello, Hello.Repo,
+  username: System.get_env("POSTGRES_USERNAME"),
+  password: System.get_env("POSTGRES_PASSWORD"),
+  url: System.get_env("DATABASE_URL"),
+  database: "hello_dev",
+  stacktrace: true,
+  show_sensitive_data_on_connection_error: true,
+  pool_size: 10
+```
+
+We get the db credentials and url from the `.env` file. An example can look like this:
+
+```
+DATABASE_URL=postgres://postgres:postgres@db/hello_dev
+POSTGRES_USERNAME=postgres
+POSTGRES_PASSWORD=postgres
+```
