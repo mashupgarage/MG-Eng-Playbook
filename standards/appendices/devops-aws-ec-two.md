@@ -3,6 +3,7 @@
 ## Basics
 Your basic on-demand, scalable computing service hosted by AWS
 One can launch many instances as needed
+
 Easy to scale depending on the demand:
   * processing aggregated reports
   * seasonal user base (user volume on Christmas season)
@@ -15,6 +16,7 @@ Available in different OS flavors:
 ## Availability Zones (AZ)
 Your data centers where your EC2 instances are localted
 Said to be fault tolerant and highly available
+
 They are under **regions**:
   * ap-southeast-1 (Asia pacific Singapore)
 
@@ -24,6 +26,7 @@ They are under **regions**:
 
 ## Virtual Private Cloud (VPC)
 Defines a virtual private network for your AWS resource (EC2, RDS etc.)
+
 Able to configure:
 * IP address ranges
 * Subnets
@@ -33,6 +36,7 @@ Able to configure:
 
 ## Security Groups
 Are a set of rules where one can specify protocal, port ranges etc.
+
 Classified into 2 types:
 * Inbound
   * set of rules for inbound traffic
