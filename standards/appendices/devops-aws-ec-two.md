@@ -6,6 +6,7 @@ One can launch many instances as needed
 Easy to scale depending on the demand:
   * processing aggregated reports
   * seasonal user base (user volume on Christmas season)
+
 Available in different OS flavors:
   * Windows
   * Linux
@@ -13,9 +14,10 @@ Available in different OS flavors:
 
 ## Availability Zones (AZ)
 Your data centers where your EC2 instances are localted
+Said to be fault tolerant and highly available
 They are under **regions**:
   * ap-southeast-1 (Asia pacific Singapore)
-Said to be fault tolerant and highly available
+
 **Multi-AZ** redundancy feature:
 * Whenever an AZ fails, there is a failover mechanism that takes over
 * It is another AZ but withing the same region
