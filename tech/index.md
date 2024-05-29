@@ -5,6 +5,7 @@
 ## NEXT.JS
 
 - [Setting up a Next.js project](/tech/nextjs/setting-up-next-js.md)
+- [Next.js docker setup](/tech/nextjs/nextjs-docker-setup.md)
 
 ## Ruby on Rails
 
