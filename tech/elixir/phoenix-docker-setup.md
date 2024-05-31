@@ -20,10 +20,6 @@ RUN apt-get update \
     sudo \
  && rm -rf /var/lib/apt/lists/*
 
-# replace * with actual node version (e.g. setup_18.x)
-RUN curl -sL https://deb.nodesource.com/setup_*.x \
-    | bash - && sudo apt-get install -y nodejs
-
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
 	&& echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
 
@@ -36,7 +32,7 @@ RUN mkdir -p /app
 WORKDIR /app
 ```
 
-For our image we base it off an existing elixir image (e.g. elixir:1.14.0). We can then install dependencies needed for package management which are hex and rebar (needed for erlang). We also should install os dependencies needed to get things to work along with node and yarn. Lastly we can install inotify-tools which is used for live reloading.
+For our image we base it off an existing elixir image (e.g. elixir:1.14.0). We can then install dependencies needed for package management which are hex and rebar (needed for erlang). We also should install os dependencies needed to get things to work along with yarn in case we would need to add JS. Lastly we can install inotify-tools which is used for live reloading.
 
 ## Docker compose
 
@@ -50,8 +46,6 @@ services:
     build: .
     volumes:
       - '.:/app'
-      - 'node_modules:/app/node_modules'
-      - 'assets_node_modules:/app/assets/node_modules'
       - 'build:/app/_build'
     ports:
       - '4000:4000'
@@ -76,12 +70,10 @@ services:
 
 volumes:
   pgdata:
-  node_modules:
-  assets_node_modules:
   build:
 ```
 
-The `web` service is our main service that we'll use to start our phoenix application. We specify `build .` to make it use the image we built in the `Dockerfile` in the same directory. To persist some of our dependencies on the host machine we use volumes for `node_modules` (Node.js modules), `assets_node_modules` (Node.js modules for phoenix projects), and `build` (elixir build files) so we don't need to install every time. We specify port 4000 so that when the service runs the specified command it will use that port. This can be changed to any port applicable and available. Lastly for any environment variables needed we store them in a `.env` file in the root of the project.
+The `web` service is our main service that we'll use to start our phoenix application. We specify `build .` to make it use the image we built in the `Dockerfile` in the same directory. To persist some of our dependencies on the host machine we use a volume for  `build` (elixir build files) so we don't need to install every time. We specify port 4000 so that when the service runs the specified command it will use that port. This can be changed to any port applicable and available. Lastly for any environment variables needed we store them in a `.env` file in the root of the project.
 
 The `db` service uses a prebuilt postgres image and persists its data using a volume. We usually use port 5432 but this can be anything depending on port availability. We also use a `.env` file to store needed information like the password. To properly use the database in the db service, you may also need to update your database config. For example for dev config in `dev.exs`:
 
