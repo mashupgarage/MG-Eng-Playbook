@@ -160,13 +160,13 @@ const testAsync = async () => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve('Data from async function')
-    })
+    }, 1000)
   })
 }
 ```
 
 As the async/await syntax looks like synchronous code we may tend to call like this:
-```javascript
+```typescript
 describe('testAsync()', () => {
   it('returns data', () => {
     const data = testAsync()
@@ -177,11 +177,37 @@ describe('testAsync()', () => {
 
 That won't give proper results since the function returns a promise. We should await it (and also make our test async):
 
-```javascript
+```typescript
 describe('testAsync()', () => {
   it('returns data', async () => {
     const data = await testAsync()
     expect(data).toBe('Data from async function')
+  })
+})
+```
+
+We can also apply the same for error cases:
+
+```typescript
+const testAsync = async () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      reject('Error happened in async function')
+    }, 1000)
+  })
+}
+```
+
+Then when calling make sure to catch the error
+
+```typescript
+describe('testAsync()', () => {
+  it('returns data', async () => {
+    try {
+      await testAsync()
+    } catch(error) {
+      expect(error).toBe('Error happened in async function')
+    }
   })
 })
 ```
