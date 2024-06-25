@@ -150,3 +150,38 @@ describe('displayName()', () => {
 ```
 
 This way we have much shorter and readable tests. It also helps DRY the data so that we can reuse it in other tests as well.
+
+## Watch out for asynchronous code
+
+Asynchronous javascript is a fairly common pattern now. Say for example we have a function like this:
+
+```typescript
+const testAsync = async () => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve('Data from async function')
+    })
+  })
+}
+```
+
+As the async/await syntax looks like synchronous code we may tend to call like this:
+```javascript
+describe('testAsync()', () => {
+  it('returns data', () => {
+    const data = testAsync()
+    expect(data).toBe('Data from async function')
+  })
+})
+```
+
+That won't give proper results since the function returns a promise. We should await it (and also make our test async):
+
+```javascript
+describe('testAsync()', () => {
+  it('returns data', async () => {
+    const data = await testAsync()
+    expect(data).toBe('Data from async function')
+  })
+})
+```
