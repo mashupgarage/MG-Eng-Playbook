@@ -13,3 +13,5 @@ The most common practice for handling errors is to display a message such as `So
 To address this problem, we should tailor error messages to specific scenarios like `There was a network error` for connection errors or `Failed to create post` for post related errors. The amount of specificity in detail will depend on the specifications of the feature or team conventions. As a project scales, it may also help to introduce error codes or custom error objects to record needed details.
 
 ## Provide proper logging
+
+As applications grow in complexity, it may not be enough to just look at error messages at the moment of the error. We need a system to persist or log the steps taken by the application to get a clearer idea of what happened. Most technologies have built in tools such as stack traces but in some cases it may help to use bug tracking tools such as `Bugsnag`.
