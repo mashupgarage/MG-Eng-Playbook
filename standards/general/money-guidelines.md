@@ -19,3 +19,17 @@ When viewing money from a number perspective we know most money systems have a u
 ```
 
 We know the saying that *every cent counts* so unexpectedly losing or gaining even a slight amount due to rounding is unacceptable. This is more critical for banking and financial apps where computations have to be precise. So do not use floats for money values in your code and db it will only cause problems down the line.
+
+## ⚠️  big decimal
+
+While it may vary between programming languages, usually there is a big decimal number representation which allows us to represent numbers more precisely. Usually we see these numbers in scientific notation (0.9975e2) and don't have the overflow problems that floats have:
+
+```
+BigDecimal("0.1") + BigDecimal("0.2")
+0.3
+
+BigDecimal("0.1") + BigDecimal("0.7")
+0.8
+```
+
+This is better for money amounts to be exact but they can be expensive to represent for most cases since most money values just have 2 decimal places for cents. Only use when more precise amounts beyond 2 decimal places is needed. One major use case for this is when computing interest where we want to store exact computations per period (e.g. daily) then only round to cents when computation is complete.
