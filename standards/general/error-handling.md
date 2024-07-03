@@ -4,7 +4,7 @@ An application with zero errors does not exist. No matter how well written, it's
 
 ## Keep errors visible
 
-As mentioned above, errors are inevitable and when they happen it should be clear that there is an issue. The more visible an error is, the faster it can be debugged and addressed. As such it's important to handle errors gracefully and provide proper messages or log them.
+As mentioned above, errors are inevitable and when they happen it should be clear that there is an issue. The more visible an error is, the faster it can be debugged and addressed. As such it's important to handle errors gracefully and provide proper messages or log them. For cases where certain errors can't be ignored because they can cause unusual behavior or prevent proper flow (e.g. disconnections, deleting something that doesn't exist, invalid dependent data) it's recommended to throw/raise exceptions so we can easily see where and why an error happened.
 
 ## Use specific error messages
 
