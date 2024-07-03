@@ -8,9 +8,13 @@ As mentioned above, errors are inevitable and when they happen it should be clea
 
 ## Use specific error messages
 
-The most common practice for handling errors is to display a message such as `Something went wrong` or `There is an error`. These messages are too generic though and while it may work initially they may become less useful for finding out what went wrong. This can become more of an issue as a codebase grows. If all error cases provide the same generic message it can be more difficult to narrow down what the issue is. When working with familiar code maybe it won't be much of an issue but when other developers with less familiarity step in (which more often than not happens) they may struggle to trace the issues.
+The most common practice for handling errors is to display a message such as `Something went wrong` or `There is an error`. These messages are too generic though and while they may work initially they may become less useful for finding out what went wrong. This can become more of an issue as a codebase grows. If all error cases provide the same generic message it can be more difficult to narrow down what the issue is. When working with familiar code maybe it won't be much of an issue but when other developers with less familiarity step in (which more often than not happens) they may struggle to trace the issues.
 
 To address this problem, we should tailor error messages to specific scenarios like `There was a network error` for connection errors or `Failed to create post` for post related errors. The amount of specificity in detail will depend on the specifications of the feature or team conventions. As a project scales, it may also help to introduce error codes or custom error objects to record needed details.
+
+## Catch specific exceptions
+
+For critical errors that can affect program correctness, we call these exceptions, it's a common practice to catch/handle them to prevent the application from crashing. Similar to point above on error messages, we should make these as specific as possible to be able to narrow down what went wrong. Most programming languages provide mechanisms to specify what exceptions to respond to and some even provide ways to create custom exceptions for specific use cases.
 
 ## Provide proper logging
 
