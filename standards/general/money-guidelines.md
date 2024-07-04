@@ -33,3 +33,7 @@ BigDecimal("0.1") + BigDecimal("0.7")
 ```
 
 This is better for money amounts to be exact but they can be expensive to represent for most cases since most money values just have 2 decimal places for cents. Only use when more precise amounts beyond 2 decimal places is needed. One major use case for this is when computing interest where we want to store exact computations per period (e.g. daily) then only round to cents when computation is complete.
+
+## ✅ integers
+
+As mentioned earlier, most money systems have a unit amount and fractional amount that's why we would typically think of floats. We know floats have problems with rounding and aren't recommended but what if we can remove the fractional amount? We can by scaling the values. We know that 199.75 pesos is actually 19975 centavos which can now be expressed as integers. By using integers we remove the need to round off and approximate because we're always dealing with exact values. We recommend to represent money in their smallest most atomic unit (mostly cents) in code and db then, similar to formatting, only scale into unit form in display. However, take note that there are some currency systems that don't do subunits such as Japanese Yen and some that use 3 decimal places instead such as Bahraini Dinar so scaling needs to be adjusted accordingly if dealing with these currencies.
