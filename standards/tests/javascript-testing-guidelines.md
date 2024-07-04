@@ -150,3 +150,64 @@ describe('displayName()', () => {
 ```
 
 This way we have much shorter and readable tests. It also helps DRY the data so that we can reuse it in other tests as well.
+
+## Watch out for asynchronous code
+
+Asynchronous javascript is a fairly common pattern now. Say for example we have a function like this:
+
+```typescript
+const testAsync = async () => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve('Data from async function')
+    }, 1000)
+  })
+}
+```
+
+As the async/await syntax looks like synchronous code we may tend to call like this:
+```typescript
+describe('testAsync()', () => {
+  it('returns data', () => {
+    const data = testAsync()
+    expect(data).toBe('Data from async function')
+  })
+})
+```
+
+That won't give proper results since the function returns a promise. We should await it (and also make our test async):
+
+```typescript
+describe('testAsync()', () => {
+  it('returns data', async () => {
+    const data = await testAsync()
+    expect(data).toBe('Data from async function')
+  })
+})
+```
+
+We can also apply the same for error cases:
+
+```typescript
+const testAsync = async () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      reject('Error happened in async function')
+    }, 1000)
+  })
+}
+```
+
+Then when calling make sure to catch the error
+
+```typescript
+describe('testAsync()', () => {
+  it('returns data', async () => {
+    try {
+      await testAsync()
+    } catch(error) {
+      expect(error).toBe('Error happened in async function')
+    }
+  })
+})
+```

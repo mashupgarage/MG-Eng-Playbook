@@ -8,6 +8,7 @@ These are the standards and practices we adopt when working with the tools menti
 - [Why do we Test?](/standards/tests/why-write-tests.md)
 - [General Testing Guidelines](/standards/tests/general-testing-guidelines.md)
 - [Ruby/Rails Testing Guidelines](/standards/tests/ruby-rails-testing-guidelines.md)
+- [Javascript Testing Guidelines](/standards/tests/javascript-testing-guidelines.md)
 - [React Testing Guidelines](/standards/tests/react-testing-guidelines.md)
 
 ## Github
