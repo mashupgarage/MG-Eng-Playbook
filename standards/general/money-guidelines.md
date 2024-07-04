@@ -58,3 +58,7 @@ Using integers is already a step in the right direction but given our last point
   amount_currency: "JPY"
 }
 ```
+
+## ✅ money library
+
+The money pattern is a big improvement in representing money effectively but we also introduced extra steps. Before displaying money values in UI we now need to scale values from cents and we also need to convert it into a format that users can read. Fortunately, since the money pattern is a common use case, we don't need to implement this ourselves because there are existing libraries that already did. For Ruby we can use the `money` gem and for Javascript we can use `Dinero.js`. Aside from managing scaling and formatting these libraries also provide ways to safely do money arithmetic and handle conversions between currencies. We highly recommend using a money library in projects when dealing with money values.
