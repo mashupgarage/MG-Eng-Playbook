@@ -1,10 +1,10 @@
 # Error Handling
 
-An application with zero errors does not exist. No matter how well written, it's inevitable that it would run into errors at some point. Hence, the most we can do is be prepared to handle these issues such that they don't bring down the application and can be addressed ASAP. These are some principles we follow to handle errors effectively.
+An application with zero bugs does not exist. No matter how well written code is, runtime errors and unexpected behavior can still happen at some point. Hence, the most we can do is be prepared to handle these issues such that they don't bring down the application and can be addressed ASAP. These are some principles we follow to handle errors effectively.
 
 ## Keep errors visible
 
-As mentioned above, errors are inevitable and when they happen it should be clear that there is an issue. The more visible an error is, the faster it can be debugged and addressed. As such it's important to handle errors gracefully and provide proper messages or log them. For cases where certain errors can't be ignored because they can cause unusual behavior or prevent proper flow (e.g. disconnections, deleting something that doesn't exist, invalid dependent data) it's recommended to throw/raise exceptions so we can easily see where and why an error happened.
+As mentioned above, the chances of an error happening will never be zero and when they happen it should be clear that there is an issue. The more visible an error is, the faster it can be debugged and addressed. As such it's important to handle errors gracefully and provide proper messages or log them. For cases where certain errors can't be ignored because they can cause unusual behavior or prevent proper flow (e.g. disconnections, deleting something that doesn't exist, invalid dependent data) it's recommended to throw/raise exceptions so we can easily see where and why an error happened.
 
 ## Use specific error messages
 
