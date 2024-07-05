@@ -3,6 +3,7 @@ These are the standards and practices we adopt when working with the tools menti
 ## General
 - [Core Concepts](/standards/core-concepts.md)
 - [Error Handling](/standards/general/error-handling.md)
+- [Money Guidelines](/standards/general/money-guidelines.md)
 
 ## Tests
 
