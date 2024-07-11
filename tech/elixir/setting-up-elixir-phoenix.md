@@ -1,4 +1,4 @@
-# Set Phoenix project up and running
+# Install elixir phoenix using ASDF
 
 This topic tackles on phoenix framework installation thru <a href="https://asdf-vm.com/guide/introduction.html" target="_blank">asdf</a> version manager.
 
