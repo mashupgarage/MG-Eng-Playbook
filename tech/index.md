@@ -16,3 +16,6 @@
 
 - [Phoenix setup using asdf](/tech/elixir/setting-up-elixir-phoenix.md)
 - [Phoenix docker setup](/tech/elixir/phoenix-docker-setup.md)
+
+## Others
+- [WSL with Docker](/tech/others/wsl.md)
