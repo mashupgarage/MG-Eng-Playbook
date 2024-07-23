@@ -26,8 +26,9 @@ sudo apt-get install libz-dev
 sudo apt-get install libyaml-dev
 sudo apt-get install libssl-dev -y
 ```
-> In arch linux you can run `sudo pacman -S base-devel` instead of build-essential
+> In arch linux you can run `sudo pacman -S base-devel` instead of build-essential.
 
+> Windows WSL typically installs ubuntu so the command above can be used under WSL2.
 
 ## Installing ruby on rails
 
@@ -54,6 +55,9 @@ asdf global nodejs latest
  yarn -v
 ```
 
+> All the packages listed above can also be defined in .tool-versions file. You can specify all your plugins and install in 1 go with just `asdf install` command.
+
+
 3. Installing Rails
 ```
 gem install rails
@@ -67,8 +71,8 @@ rails -v
 
 1. Creating new project
 ```
-# using rails new <project_name> command
-rails new blog
+# using rails new <project_name> command with postgresql as the database
+rails new blog -d postgresql
 cd blog
 gem install bundler
 bundle install
