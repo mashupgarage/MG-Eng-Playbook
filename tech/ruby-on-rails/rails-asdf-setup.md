@@ -20,7 +20,7 @@ These apps are the recommended tools to install in your machine so you won't get
 ```
 # In ubuntu run the following commands:
 sudo apt-get update
-sudo apt install openssl -y
+sudo apt-get install openssl -y
 sudo apt-get install build-essential
 sudo apt-get install libz-dev
 sudo apt-get install libyaml-dev
@@ -56,11 +56,30 @@ asdf global nodejs latest
 ```
 
 > All the packages listed above can also be defined in .tool-versions file. You can specify all your plugins and install in 1 go with just `asdf install` command.
+3. Installing Postgresql
+```
+# Install some dependencies
+sudo apt-get install build-essential libssl-dev libreadline-dev zlib1g-dev \
+libcurl4-openssl-dev uuid-dev icu-devtools libicu-dev
 
+# Install postgresql
+asdf plugin-add postgres
 
-3. Installing Rails
+# We might have an specific version supported on the server so using latest here is not a good idea.
+# Pls refer to your cloud server for the compatible version.
+asdf install postgres <version>
+
+# Starting the postgres app
+pg_ctl start
+
+```
+
+> To stop the app use `pg_ctl stop` command
+
+4. Installing Rails
 ```
 gem install rails
+gem install pg
 gem update --system
 
 # check rails installation
