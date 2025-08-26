@@ -9,6 +9,7 @@
 
 ## Ruby on Rails
 
+- [Rails setup using asdf](/tech/ruby-on-rails/rails-asdf-setup.md)
 - [Setting up a RSpec on a Ruby on Rails project](/tech/ruby-on-rails/rspec-setup.md)
 - [Rails docker setup](/tech/ruby-on-rails/rails-docker-setup.md)
 
