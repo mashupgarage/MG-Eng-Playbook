@@ -18,7 +18,7 @@
 - [Phoenix docker setup](/tech/elixir/phoenix-docker-setup.md)
 
 ## Databases
-- [Postgres](/tech/databases/postgres/backup-restore-strategies.md)
+- [Postgres](/tech/database/postgres/backup-restore-strategies.md)
 
 ## Others
 - [WSL with Docker](/tech/others/wsl.md)

@@ -18,4 +18,4 @@ At a minimum we require to write a unit tests for core functions implemented lik
 
 - [React testing library](/standards/tests/react-testing-guidelines.md)
 - [RSpecs for rails](/standards/tests/ruby-rails-testing-guidelines.md)
-- [Built-in Phoenix testing lirary](/standards/github/phoenix-testing.md)
+- [ExUnit](https://hexdocs.pm/ex_unit/ExUnit.html)

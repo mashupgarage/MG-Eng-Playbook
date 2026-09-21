@@ -91,7 +91,7 @@ config :hello, Hello.Repo,
 We get the db credentials and url from the `.env` file. An example can look like this:
 
 ```
-DATABASE_URL=postgres://postgres:postgres@db/hello_dev
+DATABASE_URL=postgres://postgres:local-development-password@db/hello_dev
 POSTGRES_USERNAME=postgres
-POSTGRES_PASSWORD=postgres
+POSTGRES_PASSWORD=local-development-password
 ```

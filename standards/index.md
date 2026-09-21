@@ -38,14 +38,11 @@ These are the standards and practices we adopt when working with the tools menti
 ## Elixir
 
 - [Elixir/Phoenix Guidelines](/standards/elixir/elixir-phoenix-standards.md)
+- [Elixir Checklist](/standards/elixir/elixir-checklist.md)
 
 ## CSS
 
 - [CSS Guidelines](/standards/css/css-guidelines.md)
-
-## Elixir
-
-- [Elixir Checklist](/standards/elixir/elixir-checklist.md)
 
 ## Project Setup
 
@@ -56,4 +53,3 @@ These are the standards and practices we adopt when working with the tools menti
 - [Suggested Readings](/standards/suggested-readings.md)
 - [Stand Up/Stand Down Guide](/standards/stand-up-guide.md)
 - [Appendices](/standards/appendices/index.md)
-

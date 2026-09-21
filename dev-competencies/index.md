@@ -6,4 +6,3 @@ This is a checklist of the concepts, ideas, and techniques a Mashup Garage Devel
 - [Elixir](/dev-competencies/elixir-competencies.md)
 - [Ruby/Rails](/dev-competencies/ruby-rails.md)
 - [Javascript/Typescript](/dev-competencies/javascript-competencies.md)
-- [CSS](/dev-competencies/css.md)

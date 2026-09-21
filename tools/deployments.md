@@ -42,6 +42,8 @@ Go to [Docker sample usage](docker/sample-rails.md) section to see it in action.
 
 ## Semaphore
 
+> **Needs verification:** This Semaphore deployment guidance may be outdated. Confirm current capabilities and project fit before adopting it.
+
 Semaphore CI is a cloud-based continuous integration and continuous delivery (CI/CD) platform. It allows developers to build, test, and deploy their code changes automatically and quickly. The platform is designed to work seamlessly with GitHub and GitLab, and it supports multiple programming languages and frameworks. Some of the features of Semaphore CI include:
 
 - Automated build and test pipeline: Allows developers to set up a series of commands that will run automatically each time code is pushed to a repository.

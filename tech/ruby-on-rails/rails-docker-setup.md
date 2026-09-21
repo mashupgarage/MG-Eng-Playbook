@@ -90,10 +90,10 @@ An example `.env` for development can look like this:
 
 ```
 RAILS_ENV=development
-DATABASE_URL=postgres://postgres:postgres@db/rails_aws_demo_development
+DATABASE_URL=postgres://postgres:local-development-password@db/rails_aws_demo_development
 POSTGRES_USER=postgres
-POSTGRES_PASSWORD=postgres
-PGPASSWORD=postgres
+POSTGRES_PASSWORD=local-development-password
+PGPASSWORD=local-development-password
 ```
 
 These two services are usually enough to get a project up and running then other services can be added as needed. For example if we run `webpack` for js bundling we can also create a service for that. If the project needs background jobs we can also set up services for `redis` and `sidekiq`.

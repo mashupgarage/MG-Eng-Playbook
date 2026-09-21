@@ -1,3 +1,5 @@
+> **Needs verification:** This setup guide reflects Next.js guidance and dependency versions from 2023. Confirm current requirements and generated project defaults in the official Next.js documentation before using it.
+
 ## Prerequisites
 
 Check the latest system requirements or minimum required versions to setup your Next.js app. This includes Node.js and yarn/npm.

@@ -6,18 +6,18 @@ in different projects that we had over the years.
 
 ## Anatomy of an AWS database connection string
 ```bash
-postgres://postgres:2002A140316e@mashup-client-staging.c6tldzinifr8.us-east-1.rds.amazonaws.com:5432/staging_db
+postgres://example_app:example-password@database.example.invalid:5432/example_app_development
 ```
 The above connection string can be dissected into parts that we could understand
 
 ```bash
 postgres://<db-user-name>:<db-user-password>@<aws-rds-hostname>:<port>/<database-name>
 
-db-user-name = postgres
-db-user-password = 2002A140316e
-aws-rds-hostname = mashup-client-staging.c6tldzinifr8.us-east-1.rds.amazonaws.com
+db-user-name = example_app
+db-user-password = example-password
+aws-rds-hostname = database.example.invalid
 port = 5432
-database-name = staging_db
+database-name = example_app_development
 ```
 
 
@@ -51,9 +51,9 @@ to restore the structure first then the data second as this ensures the integrit
 
 ### Table exemption
 For scenarios that you just want to dump all data except for some table.
-For that we use the argument `-t` and the table name to be excepted from the dump
+For that we use the argument `-T` (or `--exclude-table`) and the table name to be excluded from the dump.
 ```
-pg_dump -t 'some-table' <database-name> -h <aws-rds-hostname> -U <db-user-name> -f <dump-data-filename.sql> -a -x
+pg_dump -T '<table-name>' <database-name> -h <aws-rds-hostname> -U <db-user-name> -f <dump-data-filename.sql> -a -x
 ```
 
 ### Restoring data

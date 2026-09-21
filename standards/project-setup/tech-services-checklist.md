@@ -1,5 +1,7 @@
 # Tech Services Checklist
 
+> **Needs verification:** The service recommendations in this checklist may be outdated. Validate each choice against the project's current requirements before adopting it.
+
 In order to bootstrap a new project effectively, there are some tech services we consider setting up. This is a checklist of things to set up and our recommendations of what to use.
 
 ## Code Repository
