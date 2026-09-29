@@ -61,4 +61,3 @@ To test if docker installed properly:
 ```sh
 sudo docker run hello-world
 ```
-

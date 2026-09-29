@@ -4,9 +4,9 @@ A project lead is an assigned point person whose primary concern is to provide p
 
 To keep the engineering team updated, you must provide weekly updates on the state of the project you’re assigned to. For this matter, the project leads team meets weekly to discuss project updates mostly but not limited to the following areas:
 
-- Deployments and releases  
-- Technical challenges faced  
-- Bugfixes and improvements  
+- Deployments and releases
+- Technical challenges faced
+- Bugfixes and improvements
 - Project demos and presentations
 
 In the event that you cannot attend the meeting (e.g. schedule conflict, on leave, etc) you should send project updates to the project leads team via message on slack.
@@ -25,7 +25,7 @@ As another means of quantifying developer performance and career pathing we use 
 
 Dev check-ins are short (10-15 minute) weekly one-on-one sessions with each dev on the team. These meant to connect with the devs and can have a casual tone. It is meant to be brief and should cover at least the following:
 
-- How was the workload for this week?  
-- What are the challenges you faced?  
-- What went well? (Can discuss highlights)  
+- How was the workload for this week?
+- What are the challenges you faced?
+- What went well? (Can discuss highlights)
 - What can be improved? (Can discuss lowlights)

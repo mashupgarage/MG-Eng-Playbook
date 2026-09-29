@@ -69,4 +69,3 @@ If an object is frequently accessed and it involves heavy manipulation that take
 ## Implement Linters
 To have an efficient development workflow, we use linters for our projects. These linters will prevent us from pushing badly written or even incorrectly up in our repo. Linters such as Credo for elixir and Rubocop for ruby etc.
 - Cite examples for good linters and why we prefer to use that.
-

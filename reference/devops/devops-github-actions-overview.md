@@ -50,4 +50,3 @@ In short, they are VMs that runs these workflows
 
 ### Reference
 [Github Actions Quickstart](https://docs.github.com/en/actions/quickstart)
-
