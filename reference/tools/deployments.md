@@ -38,7 +38,7 @@ Docker provides a containerization technology that enables developers to package
 Docker also provides tools for managing and orchestrating containers, making it easy to scale and manage large numbers of containers. This allows for efficient use of resources, and consistency in deployment.
 Docker has a large ecosystem, with a lot of community support, and a wide range of tools and services that integrate with it.
 
-Go to [Docker sample usage](docker/sample-rails.md) section to see it in action.
+Go to [Rails Docker setup](/recipes/ruby-on-rails/rails-docker-setup.md) to see it in action.
 
 ## Semaphore
 
