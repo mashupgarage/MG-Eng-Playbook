@@ -6,3 +6,4 @@ MG engineering playbook repository
 ## [Tech Recipes](/tech/index.md)
 ## [Standards and Practices](/standards/index.md)
 ## [Dev Competencies](/dev-competencies/index.md)
+## [Project Lead Onboarding](/standards/project-leads/project-lead-onboarding.md)
