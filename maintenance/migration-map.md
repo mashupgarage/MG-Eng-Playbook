@@ -62,3 +62,12 @@ This map records the disposition of every Markdown file present at the start of 
 | `tools/development.md` | Move | `reference/tools/development.md` |
 | `tools/docker/sample-rails.md` | Consolidate | Content is superseded by `recipes/ruby-on-rails/rails-docker-setup.md`; the old path forwards there. |
 | `tools/index.md` | Move | `reference/tools/README.md` |
+
+## Initial AI guidance placement — 2026-10-16
+
+The initial AI draft established `ai/` for human–AI guidance and reusable skill practices. Learning competencies and exercises remain under `learning/ai/`. Retain the forwarding pages below through the first post-migration release, consistent with this map's retention rule.
+
+| Original path | Disposition | Canonical path or note |
+|---|---|---|
+| `reference/ai/agent-skills.md` | Move | `ai/skill-practices.md`; old path forwards. |
+| `reference/ai/README.md` | Move | `ai/README.md`; old index forwards. |
