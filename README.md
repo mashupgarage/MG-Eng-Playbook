@@ -10,3 +10,4 @@ For agent-assisted maintenance, start with [AGENTS.md](AGENTS.md) and [mg-mainta
 ## [Recipes](/recipes/README.md)
 ## [Reference](/reference/README.md)
 ## [Learning](/learning/README.md)
+## [AI](/ai/README.md)
