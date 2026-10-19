@@ -185,6 +185,7 @@ Keep discovery metadata brief, put the normal workflow in `SKILL.md`, and load c
 
 ## Related guidance
 
+- [Building and Maintaining Agent Skills](building-and-maintaining-skills.md) — a worked walkthrough of scoping, testing, revising, and maintaining a skill.
 - [AI-assisted development levels](../learning/ai/ai-assisted-development-levels.md)
 - [Creating effective pull requests](../standards/source-control/creating-effective-pull-requests.md)
 
